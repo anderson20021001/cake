@@ -8,5 +8,6 @@ class ProdutoController extends Controller
 {
     public function index(){
         dd('ENTROU');
+        echo('AQUI');
     }
 }

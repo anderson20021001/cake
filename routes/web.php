@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdutoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/produto',[ProdutoController::class, 'index'])->name('produto.index');
+
+/*
+  GET - pegar algo
+POST - inserir
+PUT - atualizar recurso
+DELETE- deleta um recurso
+*/
