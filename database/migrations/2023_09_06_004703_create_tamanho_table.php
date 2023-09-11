@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tamanho', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            Schema::create('clientes', function (Blueprint $table) {
+                $table->id();
+                $table->integer('tamanho');
+                $table->float('valor');
         });
     }
 

@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('recheio', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string("nome");
+            $table->float("valor");
         });
     }
 

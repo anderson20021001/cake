@@ -11,10 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('recheio', function (Blueprint $table) {
+        Schema::create('itens_vendas', function (Blueprint $table) {
             $table->id();
-            $table->string("nome");
+            $table->string("venda_id");
+            $table->string("cobertura_id");
+            $table->string("decoracao_id");
+            $table->int("tamanho_id");
+            $table->string("recheio_id");
+            $table->integer("quantidade");
+            $table->string("venda_id");
             $table->float("valor");
+
+
         });
     }
 
@@ -23,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('decoracao');
+        Schema::dropIfExists('itens_vendas');
     }
 };

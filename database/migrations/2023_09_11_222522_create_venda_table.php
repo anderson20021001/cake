@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('recheio', function (Blueprint $table) {
+        Schema::create('venda', function (Blueprint $table) {
             $table->id();
-            $table->string("nome");
-            $table->float("valor");
+            $table->string("clinte_id");
+            $table->date("data");
+
+
         });
     }
 
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('decoracao');
+        Schema::dropIfExists('venda');
     }
 };
