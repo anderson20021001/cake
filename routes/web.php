@@ -17,11 +17,6 @@ use App\Http\Controllers\ProdutoController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/produto',[ProdutoController::class, 'index'])->name('produto.index');
 
-/*
-  GET - pegar algo
-POST - inserir
-PUT - atualizar recurso
-DELETE- deleta um recurso
-*/
