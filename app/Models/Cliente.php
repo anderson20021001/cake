@@ -12,7 +12,7 @@ class Cliente extends Model
 
     protected $table = 'clientes';
 
-    public function vendas(): HasOne
+    public function vendas(): HasMany
     {
         return $this->hasMany(Venda::class, 'id', 'cliente_id');
     }

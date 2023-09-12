@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("venda_id");
             $table->string("cobertura_id");
             $table->string("decoracao_id");
-            $table->int("tamanho_id");
+            $table->bigInteger("tamanho_id");
             $table->string("recheio_id");
             $table->integer("quantidade");
             $table->string("venda_id");

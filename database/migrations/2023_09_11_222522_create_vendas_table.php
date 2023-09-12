@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('vendas', function (Blueprint $table) {
             $table->id();
-            $table->bigInt("clinte_id");
+            $table->bigInteger("clinte_id");
             $table->date("data");
 
 
