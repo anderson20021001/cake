@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('itens_vendas', function (Blueprint $table) {
             $table->id();
-            $table->string("venda_id");
-            $table->string("cobertura_id");
-            $table->string("decoracao_id");
+            $table->bigInteger("venda_id");
+            $table->bigInteger("cobertura_id");
+            $table->bigInteger("decoracao_id");
             $table->bigInteger("tamanho_id");
-            $table->string("recheio_id");
+            $table->bigInteger("recheio_id");
             $table->integer("quantidade");
-            $table->string("venda_id");
+            $table->bigInteger("venda_id");
             $table->float("valor");
 
 

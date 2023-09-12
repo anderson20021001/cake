@@ -11,7 +11,7 @@ class Decoracao extends Model
     use HasFactory;
     protected $table = 'decoracao';
 
-    public function decoracao(): HasOne
+    public function item_venda(): HasOne
     {
         return $this->hasOne(Item_venda::class, 'id', 'item_id');
     }

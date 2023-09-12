@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Cobertura extends Model
 {
     use HasFactory;
-    protected $table = 'cobertura';
+    protected $table = 'coberturas';
 
-    public function cobertura(): HasOne
+    public function item_venda(): HasOne
     {
         return $this->hasOne(Item_venda::class, 'id', 'item_id');
     }
