@@ -9,11 +9,11 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Item_venda extends Model
 {
     use HasFactory;
-    protected $table = 'item_venda';
+    protected $table = 'itens_vendas';
 
     public function cobertura(): HasOne
     {
-        return $this->hasOne(Cobertura::class, 'id', 'cobertura_id');
+        return $this->hasOne(Cobertura::class, 'cobertura_id', 'id');
     }
     public function recheio(): HasOne
     {

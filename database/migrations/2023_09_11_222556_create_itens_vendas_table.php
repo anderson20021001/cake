@@ -12,15 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('itens_vendas', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->bigInteger("venda_id");
             $table->bigInteger("cobertura_id");
             $table->bigInteger("decoracao_id");
             $table->bigInteger("tamanho_id");
             $table->bigInteger("recheio_id");
+            $table->bigInteger("massa_id");
             $table->integer("quantidade");
-            $table->bigInteger("venda_id");
             $table->float("valor");
+            $table->timestamps();
 
 
         });

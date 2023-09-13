@@ -10,7 +10,7 @@ class Massa extends Model
 {
     use HasFactory;
 
-    protected $table = 'massa';
+    protected $table = 'massas';
 
     public function massa(): HasOne
     {

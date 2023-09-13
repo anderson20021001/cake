@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Item_venda;
 use Illuminate\Http\Request;
 
 class Itens_vendasController extends Controller
@@ -11,7 +11,11 @@ class Itens_vendasController extends Controller
      */
     public function index()
     {
-        //
+        $itens_vendas = Item_venda::find(1);
+        //dd($itens_vendas);
+        foreach ($itens_vendas as $key => $value) {
+            echo($value->cobertura->nome);
+        }
     }
 
     /**

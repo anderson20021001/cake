@@ -14,6 +14,6 @@ class Cliente extends Model
 
     public function vendas(): HasMany
     {
-        return $this->hasMany(Venda::class, 'id', 'cliente_id');
+        return $this->hasMany(Venda::class, 'cliente_id', 'id');
     }
 }

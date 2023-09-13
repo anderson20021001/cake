@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class VendasSeeder extends Seeder
 {
@@ -13,10 +14,10 @@ class VendasSeeder extends Seeder
     public function run(): void
     {
 
-        DB::table('users')->insert([
-            'name' => Str::random(10),
-            'email' => Str::random(10).'@gmail.com',
-            'password' => Hash::make('password'),
+        DB::table('vendas')->insert([
+            'cliente_id' => 1,
+            'data' => '2023-09-12',
+            
         ]);
     }
 }

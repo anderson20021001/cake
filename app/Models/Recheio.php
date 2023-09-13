@@ -9,7 +9,7 @@ class Recheio extends Model
 {
     use HasFactory;
 
-    protected $table = 'recheio';
+    protected $table = 'recheios';
 
     public function recheio(): HasOne
     {

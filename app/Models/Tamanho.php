@@ -10,7 +10,7 @@ class Tamanho extends Model
 {
     use HasFactory;
 
-    protected $table = 'tamanho';
+    protected $table = 'tamanhos';
 
     public function tamanho(): HasOne
     {

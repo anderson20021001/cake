@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Decoracao;
 use Illuminate\Http\Request;
 
 class DecoracaoController extends Controller

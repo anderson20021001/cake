@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Tamanho;
 use Illuminate\Http\Request;
 
 class TamanhoController extends Controller

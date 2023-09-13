@@ -1,17 +1,22 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 
-class ClientesController extends Controller
+class ClienteController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $cliente = Cliente::find(1);
+        //dd($cliente);
+        foreach ($cliente->vendas as $key => $value) {
+            echo($value->data);
+        }
+
     }
 
     /**

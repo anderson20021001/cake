@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Recheio;
 use Illuminate\Http\Request;
 
 class RecheioController extends Controller

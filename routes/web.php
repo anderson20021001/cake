@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\Itens_vendasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/produto',[ProdutoController::class, 'index'])->name('produto.index');
+Route::get('/cliente',[ClienteController::class, 'index'])->name('cliente.index');
+Route::get('/itens_vendas',[Itens_vendasController::class, 'index'])->name('Intes_vendas.index');
+
 

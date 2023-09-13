@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Massa;
 use Illuminate\Http\Request;
 
 class MassaController extends Controller

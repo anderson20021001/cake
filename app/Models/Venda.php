@@ -10,10 +10,10 @@ class Venda extends Model
 {
     use HasFactory;
 
-    protected $table = 'venda';
+    protected $table = 'vendas';
 
-    public function venda(): HasOne
+    public function cliente(): HasOne
     {
-        return $this->hasOne(Item_venda::class, 'id', 'cliente_id');
+        return $this->hasOne(cliente::class, 'id', 'cliente_id');
     }
 }

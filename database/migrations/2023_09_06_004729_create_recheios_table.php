@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-            Schema::create('clientes', function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table->integer('tamanho');
-                $table->float('valor');
+        Schema::create('recheios', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string("nome");
+            $table->float("valor");
+            $table->timestamps();
         });
     }
 
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tamanho');
+        Schema::dropIfExists('recheio');
     }
 };

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Venda;
 use Illuminate\Http\Request;
 
 class VendasController extends Controller

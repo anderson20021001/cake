@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Decoracao extends Model
 {
     use HasFactory;
-    protected $table = 'decoracao';
+    protected $table = 'decoracoes';
 
     public function item_venda(): HasOne
     {
