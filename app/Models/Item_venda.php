@@ -13,7 +13,7 @@ class Item_venda extends Model
 
     public function cobertura(): HasOne
     {
-        return $this->hasOne(Cobertura::class, 'cobertura_id', 'id');
+        return $this->hasOne(Cobertura::class, 'id', 'cobertura_id');
     }
     public function recheio(): HasOne
     {
