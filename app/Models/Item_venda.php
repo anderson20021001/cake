@@ -15,6 +15,7 @@ class Item_venda extends Model
     {
         return $this->hasOne(Cobertura::class, 'id', 'cobertura_id');
     }
+    
     public function recheio(): HasOne
     {
         return $this->hasOne(Recheio::class, 'id', 'recheio_id');
