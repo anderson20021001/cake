@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             TamanhosSeeder::class,
             VendasSeeder::class,
             ItensVendasSeeder::class,
-
+            CoberturasSeeder::class,
         ]);
     }
 }

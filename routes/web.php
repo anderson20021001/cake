@@ -22,6 +22,11 @@ Route::get('/', function () {
 Route::get('/cliente',[ClienteController::class, 'index'])->name('cliente.index');
 Route::get('/itens_vendas',[Itens_vendasController::class, 'index'])->name('Intes_vendas.index');
 
+Route::get('/clientes/{id}',[ClienteController::class, 'show'])->name('cliente.show');
+
+Route::get('/cliente/create', [ClienteController::class, 'create']);
+Route::post('/produto/create', [ClienteController::class, 'store']);
+
 
 
 Auth::routes();

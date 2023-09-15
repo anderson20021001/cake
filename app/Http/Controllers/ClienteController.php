@@ -24,7 +24,9 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        $clientes = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        dd($categorias);
+        return view ('cliente.cliente_create' , ['clientes' => $clientes]);
     }
 
     /**
@@ -40,7 +42,9 @@ class ClienteController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $cliente = Cliente::find($id);
+        return view('cliente.show', ['produto' => $produto]);
+
     }
 
     /**

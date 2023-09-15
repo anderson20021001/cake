@@ -1,22 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Item_venda;
+
 use Illuminate\Http\Request;
 
-class Itens_vendasController extends Controller
+class CoberturaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $itens_vendas = Item_venda::find(1);
-        dd($itens_vendas->cobertura->nome);
-        //foreach ($itens_vendas as $key => $value) {
-            //dd($value);
-        //    echo($value->cobertura->nome);
-        //}
+        //
     }
 
     /**
