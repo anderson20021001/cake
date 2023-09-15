@@ -1,22 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Cliente;
+
 use Illuminate\Http\Request;
 
-class ClienteController extends Controller
+class CoberturaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $cliente = Cliente::find(1);
-        //dd($cliente);
-        foreach ($cliente->vendas as $key => $value) {
-            echo($value->data);
-        }
-
+        //
     }
 
     /**
@@ -24,9 +19,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        $clientes = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        dd($categorias);
-        return view ('cliente.cliente_create' , ['clientes' => $clientes]);
+        //
     }
 
     /**
@@ -42,9 +35,7 @@ class ClienteController extends Controller
      */
     public function show(string $id)
     {
-        $cliente = Cliente::find($id);
-        return view('cliente.show', ['produto' => $produto]);
-
+        //
     }
 
     /**

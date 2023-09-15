@@ -24,4 +24,7 @@ Route::get('/itens_vendas',[Itens_vendasController::class, 'index'])->name('Inte
 
 Route::get('/clientes/{id}',[ClienteController::class, 'show'])->name('cliente.show');
 
+Route::get('/cliente/create', [ClienteController::class, 'create']);
+Route::post('/produto/create', [ClienteController::class, 'store']);
+
 
