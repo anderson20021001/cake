@@ -320,8 +320,13 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Categoria',
+            'url'  => 'Categoria',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Produto',
+            'url'  => 'Produto',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

@@ -28,7 +28,7 @@ Route::get('/cliente/create', [ClienteController::class, 'create']);
 Route::post('/produto/create', [ClienteController::class, 'store']);
 
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
