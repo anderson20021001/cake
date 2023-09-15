@@ -23,3 +23,7 @@ Route::get('/cliente',[ClienteController::class, 'index'])->name('cliente.index'
 Route::get('/itens_vendas',[Itens_vendasController::class, 'index'])->name('Intes_vendas.index');
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
