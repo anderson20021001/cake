@@ -11,7 +11,8 @@ class DecoracaoController extends Controller
      */
     public function index()
     {
-        //
+        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('cliente.cliente_index' , ['cliente' => $cliente]);
     }
 
     /**
@@ -19,7 +20,8 @@ class DecoracaoController extends Controller
      */
     public function create()
     {
-        //
+        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('cliente.cliente_create' , ['cliente' => $cliente]);
     }
 
     /**
@@ -27,7 +29,8 @@ class DecoracaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('cliente.cliente_request' , ['cliente' => $cliente]);
     }
 
     /**
@@ -35,7 +38,8 @@ class DecoracaoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('cliente.cliente_show' , ['cliente' => $cliente]);
     }
 
     /**
@@ -43,7 +47,8 @@ class DecoracaoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('cliente.cliente_id' , ['cliente' => $cliente]);
     }
 
     /**
@@ -51,7 +56,8 @@ class DecoracaoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('cliente.cliente_update' , ['cliente' => $cliente]);
     }
 
     /**
@@ -59,6 +65,7 @@ class DecoracaoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('cliente.cliente_destroy' , ['cliente' => $cliente]);
     }
 }

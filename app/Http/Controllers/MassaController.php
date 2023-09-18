@@ -11,7 +11,8 @@ class MassaController extends Controller
      */
     public function index()
     {
-        //
+        $massa = cliente::orderBy('nome')->get();
+       return view('cliente.index', ['cliente' => $cliente]);
     }
 
     /**
@@ -19,7 +20,8 @@ class MassaController extends Controller
      */
     public function create()
     {
-        //
+        $cliente = cliente::orderBy('nome')->get();
+       return view('cliente.create', ['cliente' => $cliente]);
     }
 
     /**
@@ -27,15 +29,16 @@ class MassaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+     $cliente = cliente::orderBy('nome')->get();
+       return view('cliente.', ['cliente' => $cliente]);
     }
 
     /**
      * Display the specified resource.
      */
     public function show(string $id)
-    {
-        //
+    { $cliente = cliente::orderBy('nome')->get();
+        return view('cliente.show', ['cliente' => $cliente]);
     }
 
     /**
@@ -43,22 +46,35 @@ class MassaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $cliente = cliente::orderBy('nome')->get();
+        return view('cliente.edit', ['cliente' => $cliente]);
+    }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'nome'         => 'required|min:5',
+           
+           ]);
+
+        $massa = Categoria::find($id);
+        $massa->nome         = $request->massa;
+  
+        $massa->save();
+
+        return redirect('/massa')->with('status','Categoria atualizado com sucesso!');
+
     }
+    
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        $cliente = cliente::orderBy('nome')->get();
+        return view('cliente.destroy', ['cliente' => $cliente]);
     }
-}
+    
