@@ -320,13 +320,13 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'Categoria',
-            'url'  => 'Categoria',
+            'text' => 'Pedidos clientes',
+            'url'  => 'Pedidos clientes',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'Produto',
-            'url'  => 'Produto',
+            'text' => 'Dashboard',
+            'url'  => 'Dashboard',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
