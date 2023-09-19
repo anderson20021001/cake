@@ -6,29 +6,25 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $cliente = Cliente::find(1);
-        //dd($cliente);
-        foreach ($cliente->vendas as $key => $value) {
-            echo($value->data);
-        }
-
-    }
-
+   
+public function index()
+{
+    
+    $produtos = cliente::orderBy('nome')->get();
+   return view('cliente.index', ['cliente' => $cliente]);
+}
+}
     /**
      * Show the form for creating a new resource.
      */
+    
     public function create()
     {
-        $clientes = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        dd($categorias);
-        return view ('cliente.cliente_create' , ['clientes' => $clientes]);
+        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        dd($Cliente);
+        return view ('cliente_create' , ['cliente' => $cliente]);
 
-       
+    
 
     }
 
@@ -37,7 +33,10 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        dd($Cliente);
+        return view ('cliente_store' , ['cliente' => $cliente]);
+
     }
 
     /**
@@ -45,8 +44,10 @@ class ClienteController extends Controller
      */
     public function show(string $id)
     {
-        $cliente = Cliente::find($id);
-        return view('cliente.show', ['produto' => $produto]);
+        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        dd($Cliente);
+        return view ('cliente_show' , ['cliente' => $cliente]);
+
 
     }
 
@@ -55,9 +56,9 @@ class ClienteController extends Controller
      */
     public function edit(string $id)
     {
-        $produto = Produto::find($id);
-        $categorias = Categoria::OrderBy('nome','ASC')->get();
-       return view('produto.produto_edit' , ['produto' => $produto, 'categorias' => '$categorias']);
+        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        dd($Cliente);
+        return view ('cliente_edit' , ['cliente' => $cliente]);
     }
 
     /**
@@ -65,7 +66,10 @@ class ClienteController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        dd($Cliente);
+        return view ('cliente_update' , ['cliente' => $cliente]);
+
     }
 
     /**
@@ -73,6 +77,8 @@ class ClienteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
-    }
+        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        dd($Cliente);
+        return view ('cliente_destroy' , ['cliente' => $cliente]);
+
 }

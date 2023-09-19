@@ -11,8 +11,9 @@ class CoberturaController extends Controller
      */
     public function index()
     {
+          
         $cobertura = cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cobertura.cliente_index' , ['cliente' => $cliente]);
+        return view ('cobertura.index' , ['cliente' => $cobertura]);
     }
 
     /**
@@ -21,7 +22,7 @@ class CoberturaController extends Controller
     public function create()
     {
         $cobertura = cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-          return view ('cliente.cliente_create' , ['cliente' => $cliente]);
+          return view ('cobertura.create' , ['cliente' => $cobertura]);
     }
 
     /**
@@ -30,7 +31,7 @@ class CoberturaController extends Controller
     public function store(Request $request)
     {
         $cobertura = cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_store' , ['cliente' => $cliente]);
+        return view ('cobertura.store' , ['cobertura' => $cobertura]);
     }
 
     /**
@@ -39,7 +40,7 @@ class CoberturaController extends Controller
     public function show(string $id)
     {
         $cobertura = cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_show' , ['cliente' => $cliente]);
+        return view ('ccobertura.show' , ['cobertura' => $cobertura]);
     }
 
     /**
@@ -48,7 +49,7 @@ class CoberturaController extends Controller
     public function edit(string $id)
     {
         $cobertura = cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_edit' , ['cliente' => $cliente]);
+        return view ('cobertura.edit' , ['cobertura' => $cliente]);
     }
 
     /**
@@ -57,7 +58,7 @@ class CoberturaController extends Controller
     public function update(Request $request, string $id)
     {
         $cobertura = cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_update' , ['cliente' => $cliente]);
+        return view ('cobertura.update' , ['cliente' => $cliente]);
     }
 
     /**
@@ -66,6 +67,6 @@ class CoberturaController extends Controller
     public function destroy(string $id)
     {
         $cobertura = cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_destroy' , ['cliente' => $cliente]);
+        return view ('cobertura.destroy' , ['cliente' => $cliente]);
     }
 }
