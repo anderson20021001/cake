@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             VendasSeeder::class,
             ItensVendasSeeder::class,
             CoberturasSeeder::class,
+            UserSeeder::class,
+
         ]);
     }
 }
