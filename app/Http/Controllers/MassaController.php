@@ -49,7 +49,7 @@ class MassaController extends Controller
         $cliente = cliente::orderBy('nome')->get();
         return view('cliente.edit', ['cliente' => $cliente]);
     }
-    }
+    
 
 
     public function update(Request $request, string $id)
@@ -77,4 +77,4 @@ class MassaController extends Controller
         $cliente = cliente::orderBy('nome')->get();
         return view('cliente.destroy', ['cliente' => $cliente]);
     }
-    
+}

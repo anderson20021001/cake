@@ -10,18 +10,19 @@ class ClienteController extends Controller
 public function index()
 {
     
-    $produtos = cliente::orderBy('nome')->get();
-   return view('cliente.index', ['cliente' => $cliente]);
+    $clientes = cliente::orderBy('nome')->get();
+    //dd($clientes);
+    return view('cliente.index', ['cliente' => $cliente]);
 }
-}
+
     /**
      * Show the form for creating a new resource.
      */
     
     public function create()
     {
-        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        dd($Cliente);
+        $clientes = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        //dd($Cliente);
         return view ('cliente_create' , ['cliente' => $cliente]);
 
     
@@ -35,7 +36,7 @@ public function index()
     {
         $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
         dd($Cliente);
-        return view ('cliente_store' , ['cliente' => $cliente]);
+        //return view ('cliente_store' , ['clientes' => $clientes]);
 
     }
 
@@ -81,4 +82,5 @@ public function index()
         dd($Cliente);
         return view ('cliente_destroy' , ['cliente' => $cliente]);
 
+}
 }
