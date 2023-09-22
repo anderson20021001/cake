@@ -19,18 +19,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cliente',[ClienteController::class, 'index'])->name('cliente.index');
-Route::get('/itens_vendas',[Itens_vendasController::class, 'index'])->name('Intes_vendas.index');
+Route::get('/cliente',[ClienteController::class, 'index'])->name('cliente.index')->middleware('can:is_admin');
+Route::get('/itens_vendas',[Itens_vendasController::class, 'index'])->name('Intes_vendas.index')->middleware('can:is_admin');
 
-Route::get('/clientes/{id}',[ClienteController::class, 'show'])->name('cliente.show');
+Route::get('/clientes/{id}',[ClienteController::class, 'show'])->name('cliente.show')->middleware('can:is_admin');
 
-Route::get('/cliente/create', [ClienteController::class, 'create']);
-Route::post('/produto/create', [ClienteController::class, 'store']);
+Route::get('/cliente/create', [ClienteController::class, 'create'])->middleware('can:is_admin');
+Route::post('/produto/create', [ClienteController::class, 'store'])->middleware('can:is_admin');
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('can:is_admin');
 
 
 

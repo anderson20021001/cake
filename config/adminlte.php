@@ -323,11 +323,13 @@ return [
             'text' => 'Pedidos clientes',
             'url'  => 'Pedidos clientes',
             'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
         ],
         [
             'text' => 'Dashboard',
             'url'  => 'Dashboard',
             'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
         ],
         [
             'text' => 'change_password',

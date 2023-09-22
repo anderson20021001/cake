@@ -18,32 +18,39 @@ class UserSeeder extends Seeder
             'name' => 'André Neves',
             'email' => 'andr@andr.com.br',
             'password' => Hash::make('123456789'),
+            'perfil' => 'admin',
         ]);
 
         DB::table('users')->insert([
             'name' => 'Anderson André',
             'email' => 'andersonandersonandre799@gmail.com',
             'password' => Hash::make('1234567899'),
+            'perfil' => 'admin',
+            
         ]);
         DB::table('users')->insert([
             'name' => 'Vera André',
             'email' => 'vera799@gmail.com',
             'password' => Hash::make('12345678999'),
+            'perfil' => 'admin',
         ]);
         DB::table('users')->insert([
             'name' => 'Eliana André',
             'email' => 'eliane799@gmail.com',
             'password' => Hash::make('123456789999'),
+            'perfil' => 'admin',
         ]);
         DB::table('users')->insert([
             'name' => 'Maria André',
             'email' => 'maria799@gmail.com',
             'password' => Hash::make('1234567899999'),
+            'perfil' => 'admin',
         ]);
         DB::table('users')->insert([
             'name' => 'Jorge André',
             'email' => 'jorge799@gmail.com',
             'password' => Hash::make('12345678999999'),
+            'perfil' => 'admin',
         ]);
     }
 }
