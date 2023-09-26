@@ -320,8 +320,14 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'Pedidos clientes',
-            'url'  => 'Pedidos clientes',
+            'text' => 'Pedidos',
+            'url'  => 'pedido',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
+        ],
+        [
+            'text' => 'Clientes',
+            'url'  => 'cliente',
             'icon' => 'fas fa-fw fa-user',
             'can'  => 'is_admin',
         ],

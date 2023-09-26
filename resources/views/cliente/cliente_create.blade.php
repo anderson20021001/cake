@@ -15,14 +15,14 @@
 @endif
 
 
-    <form method="POST" action="{{url('/produto/create')}}">
+    <form method="POST" action="{{url('/cliente/create')}}">
         @csrf
 
-        <label for="categoria">Escolha uma categoria:</label>
+        <label for="cliente">Escolha uma categoria:</label>
 
-        <select name="categoria_id" id="categoria">
-             @foreach($categorias as $categoria)
-                <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
+        <select name="cliente_id" id="cliente">
+             @foreach($clientes as $cliente)
+                <option value="{{ $cliente->id }}">{{ $cliente->nome }}</option>
             @endforeach
         </select>
         <br>

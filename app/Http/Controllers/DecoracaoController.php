@@ -47,8 +47,8 @@ class DecoracaoController extends Controller
      */
     public function edit(string $id)
     {
-        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_id' , ['cliente' => $cliente]);
+        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('dliente.cliente_id' , ['cliente' => $cliente]);
     }
 
     /**

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\Itens_vendasController;
+use App\Http\Controllers\PedidoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,10 @@ Route::get('/clientes/{id}',[ClienteController::class, 'show'])->name('cliente.s
 Route::get('/cliente/create', [ClienteController::class, 'create'])->middleware('can:is_admin');
 Route::post('/produto/create', [ClienteController::class, 'store'])->middleware('can:is_admin');
 
+
+Route::get('/pedido',[PedidoController::class, 'index'])->name('pedido.index')->middleware('can:is_admin');
+Route::get('/pedido/create',[PedidoController::class, 'create'])->name('pedido.index')->middleware('can:is_admin');
+Route::post('/pedido/create',[PedidoController::class, 'store'])->name('pedido.index')->middleware('can:is_admin');
 
 Auth::routes();
 
