@@ -23,7 +23,7 @@ public function index()
     {
         $clientes = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
         //dd($Cliente);
-        return view ('cliente_create' , ['cliente' => $cliente]);
+        return view ('cliente.cliente_create' , ['clientes' => $clientes]);
 
     
 
@@ -35,8 +35,8 @@ public function index()
     public function store(Request $request)
     {
         $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        dd($Cliente);
-        //return view ('cliente_store' , ['clientes' => $clientes]);
+        //dd($Cliente);
+        return view ('cliente.cliente_store' , ['clientes' => $clientes]);
 
     }
 
@@ -45,9 +45,9 @@ public function index()
      */
     public function show(string $id)
     {
-        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        dd($Cliente);
-        return view ('cliente_show' , ['cliente' => $cliente]);
+        $cliente = Cliente::find($id); //pluck('nome', 'id' );
+        //dd($Cliente);
+        return view ('cliente.cliente_show' , ['cliente' => $cliente]);
 
 
     }
@@ -57,9 +57,9 @@ public function index()
      */
     public function edit(string $id)
     {
-        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        dd($Cliente);
-        return view ('cliente_edit' , ['cliente' => $cliente]);
+        $cliente = Cliente::find($id); //pluck('nome', 'id' );
+        //dd($cliente);
+        return view ('cliente.cliente_edit' , ['cliente' => $cliente]);
     }
 
     /**
@@ -67,10 +67,20 @@ public function index()
      */
     public function update(Request $request, string $id)
     {
-        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        dd($Cliente);
-        return view ('cliente_update' , ['cliente' => $cliente]);
+        $messages = [
+            'nome.required' => 'O :attribute é obrigatório!',
+             ];
 
+
+        $Validated = $request->validate([
+            'nome'          => 'required|min:5',
+        ], $messages);
+
+        $cliente = Cliente::find($id);
+        $cliente->nome                = $request->nome;
+        $cliente->save();    
+        
+        return redirect()->route('cliente.index')->with('status', 'Cliente alterado com sucesso');
     }
 
     /**
@@ -78,9 +88,10 @@ public function index()
      */
     public function destroy(string $id)
     {
-        $cliente = Cliente::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        dd($Cliente);
-        return view ('cliente_destroy' , ['cliente' => $cliente]);
+        $cliente = Cliente::find($id); //pluck('nome', 'id' );
+        $cliente->delete();
+        //dd($Cliente);
+        return redirect()->route('cliente.index')->with('status', 'Cliente excluido com sucesso');
 
 }
 }

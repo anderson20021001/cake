@@ -332,6 +332,42 @@ return [
             'can'  => 'is_admin',
         ],
         [
+            'text' => 'Massas',
+            'url'  => 'massa',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
+        ],
+        [
+            'text' => 'Coberturas',
+            'url'  => 'cobertura',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
+        ],
+        [
+            'text' => 'Tamanhos',
+            'url'  => 'tamanho',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
+        ],
+        [
+            'text' => 'Decorações',
+            'url'  => 'decoracao',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
+        ],
+        [
+            'text' => 'Vendas',
+            'url'  => 'venda',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
+        ],
+        [
+            'text' => 'Itens',
+            'url'  => 'item',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
+        ],
+        [
             'text' => 'Dashboard',
             'url'  => 'Dashboard',
             'icon' => 'fas fa-fw fa-user',

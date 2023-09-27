@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Venda;
+
 use Illuminate\Http\Request;
 
 class VendaController extends Controller
@@ -11,7 +11,9 @@ class VendaController extends Controller
      */
     public function index()
     {
-        //
+          
+        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('venda.venda_index' , ['vendas' => $vendas]);
     }
 
     /**
@@ -19,7 +21,8 @@ class VendaController extends Controller
      */
     public function create()
     {
-        //
+        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+          return view ('venda.venda_create' , ['vendas' => $vendas]);
     }
 
     /**
@@ -27,7 +30,8 @@ class VendaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('venda.venda_store' , ['vendas' => $vendas]);
     }
 
     /**
@@ -35,7 +39,8 @@ class VendaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('venda.venda_show' , ['vendas' => $vendas]);
     }
 
     /**
@@ -43,7 +48,8 @@ class VendaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('venda.venda_edit' , ['vendas' => $vendas]);
     }
 
     /**
@@ -51,7 +57,8 @@ class VendaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('venda.venda_update' , ['vendas' => $vendas]);
     }
 
     /**
@@ -59,6 +66,7 @@ class VendaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('venda.venda_destroy' , ['vendas' => $vendas]);
     }
 }

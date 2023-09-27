@@ -44,33 +44,28 @@
     <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">Categoria</th>
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
-        <th scope="col">Valor</th>
-        <th scope="col">Quantidade</th>
         <th scope="col">Ações</th>
       </tr>
     </thead>
   <tbody>
   @foreach ($clientes as $cliente)
     <tr>
-    <td>{{$cliente->nome}}</td>
     <td>{{$cliente->id}}</td>
       <td>{{$cliente->nome}}</td>
-      <td>{{$cliente->preco}}</td>
-      <td>{{$cliente->quantidade}}</td>
-
       <td>
-        <div>
+
+        
         <a href= "{{ url('/cliente/' . $cliente->id) }}">VISUALIZAR</a>
         <a href= "{{ url('/cliente/' . $cliente->id . '/edit') }}">EDITAR</a>
         <form method="POST" action="{{ url('/cliente/' . $cliente->id) }}" onsubmit = "return ConfirmDelete()" >
           @method('DELETE')
           @csrf
         <input type="submit" value="EXCLUIR">
-  </div>
-  </form>
+        </form>
+  
+  
       </td>
     </tr>
     @endforeach

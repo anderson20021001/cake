@@ -1,8 +1,8 @@
 <div class="container">
-    <h1>Produto</h1>
-    <strong>Nome:</strong> {{ $produto->nome}}<br>
-    <strong>Quantidade:</strong> {{ $produto->quantidade}}<br>
-    <strong>Preço:</strong> {{ $produto->preco}}<br>
-    <strong>Criação:</strong> {{$produto->create_at}}<br>
+    <h1>cobertura</h1>
+    <strong>Nome:</strong> {{ $cobertura->nome}}<br>
+    <strong>Quantidade:</strong> {{ $cobertura->quantidade}}<br>
+    <strong>Preço:</strong> {{ $cobertura->preco}}<br>
+    <strong>Criação:</strong> {{$cobertura->create_at}}<br>
 
 </div>

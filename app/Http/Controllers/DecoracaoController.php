@@ -11,8 +11,8 @@ class DecoracaoController extends Controller
      */
     public function index()
     {
-        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_index' , ['cliente' => $cliente]);
+        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('decoracao.decoracao_index' , ['decoracao' => $decoracao]);
     }
 
     /**
@@ -20,8 +20,8 @@ class DecoracaoController extends Controller
      */
     public function create()
     {
-        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_create' , ['cliente' => $cliente]);
+        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('decoracao.decoracao_create' , ['decoracoes' => $decoracoes]);
     }
 
     /**
@@ -30,7 +30,7 @@ class DecoracaoController extends Controller
     public function store(Request $request)
     {
         $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_request' , ['cliente' => $cliente]);
+        return view ('decoracao.decoracao_request' , ['decoracao' => $decoracao]);
     }
 
     /**
@@ -39,7 +39,7 @@ class DecoracaoController extends Controller
     public function show(string $id)
     {
         $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_show' , ['cliente' => $cliente]);
+        return view ('decoracao.decoracao_show' , ['decoracao' => $decoracao]);
     }
 
     /**
@@ -48,7 +48,7 @@ class DecoracaoController extends Controller
     public function edit(string $id)
     {
         $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('dliente.cliente_id' , ['cliente' => $cliente]);
+        return view ('dliente.decoracao_id' , ['decoracao' => $decoracao]);
     }
 
     /**
@@ -56,8 +56,8 @@ class DecoracaoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_update' , ['cliente' => $cliente]);
+        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('decoracao.decoracao_update' , ['decoracoes' => $decoracoes]);
     }
 
     /**
@@ -65,7 +65,7 @@ class DecoracaoController extends Controller
      */
     public function destroy(string $id)
     {
-        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cliente.cliente_destroy' , ['cliente' => $cliente]);
+        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('decoracao.decoracao_destroy' , ['decoracoes' => $decoracoes]);
     }
 }

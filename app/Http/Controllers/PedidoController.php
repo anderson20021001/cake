@@ -28,7 +28,8 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $recheio = Recheio::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('recheio.recheio_store' , ['recheios' => $recheios]);
     }
 
     /**
@@ -36,7 +37,8 @@ class PedidoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $recheio = Recheio::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('recheio.recheio_show' , ['recheios' => $recheios]);
     }
 
     /**
@@ -44,7 +46,8 @@ class PedidoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $recheio = Recheio::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('recheio.recheio_edit' , ['recheios' => $recheios]);
     }
 
     /**
@@ -52,7 +55,8 @@ class PedidoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $recheio = Recheio::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('recheio.recheio_update' , ['recheios' => $recheios]);
     }
 
     /**
@@ -60,6 +64,8 @@ class PedidoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
+        $recheio = Recheio::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('recheio.recheio_destroy' , ['recheios' => $recheios]);
     }
 }

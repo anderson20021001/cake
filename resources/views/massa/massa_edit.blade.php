@@ -12,7 +12,7 @@
 @endif
 
 
-    <form method="POST" action="{{ url('/produto/' . $produto ->id) }}">
+    <form method="POST" action="{{ url('/massa/' . $massa ->id) }}">
         @method('PUT')
         @csrf
         <form>
@@ -21,7 +21,7 @@
     <select name="categoria_id" id="categoria">
      @foreach($categorias as $categoria)
         <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
-            @if($categoria->id == $produto->categoria_id)
+            @if($categoria->id == $massa->categoria_id)
             <option value="{{ $categoria->id }}" selected>{{ $categoria->nome}}</option>
             @else
             <option value="{{ $categoria->id }}"> {{ $categoria->nome}}</option>
@@ -30,13 +30,13 @@
     </select>
 
   <label for="fname">Nome:</label><br>
-  <input type="text" id="fname" name="nome" value="{{$produto ->nome}}"><br>
+  <input type="text" id="fname" name="nome" value="{{$massa ->nome}}"><br>
 
   <label for="fname">Quantidade:</label><br>
-  <input type="text" id="fname" name="quantidade" value="{{$produto ->quantidade}}"><br>
+  <input type="text" id="fname" name="quantidade" value="{{$massa ->quantidade}}"><br>
 
   <label for="fname">Preço:</label><br>
-  <input type="text" id="fname" name="preco" value="{{$produto ->preco}}" ><br>
+  <input type="text" id="fname" name="preco" value="{{$massa ->preco}}" ><br>
 
   <input type="submit" value="Enviar">
 

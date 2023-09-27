@@ -15,7 +15,7 @@
 @endif
 
 
-    <form method="POST" action="{{url('/produto/create')}}">
+    <form method="POST" action="{{url('/tamanho/create')}}">
         @csrf
 
         <label for="categoria">Escolha uma categoria:</label>

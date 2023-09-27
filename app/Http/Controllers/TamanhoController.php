@@ -11,7 +11,9 @@ class TamanhoController extends Controller
      */
     public function index()
     {
-        //
+          
+        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('tamanho.tamanho_index' , ['tamanho' => $tamanho]);
     }
 
     /**
@@ -19,7 +21,8 @@ class TamanhoController extends Controller
      */
     public function create()
     {
-        //
+        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+          return view ('tamanho.tamanho_create' , ['tamanhos' => $tamanhos]);
     }
 
     /**
@@ -27,7 +30,8 @@ class TamanhoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('tamanho.tamanho_store' , ['tamanhos' => $tamanhos]);
     }
 
     /**
@@ -35,7 +39,8 @@ class TamanhoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('tamanho.tamanho_show' , ['tamanhos' => $tamanhos]);
     }
 
     /**
@@ -43,7 +48,8 @@ class TamanhoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('tamanho.tamanho_edit' , ['tamanhos' => $tamanhos]);
     }
 
     /**
@@ -51,7 +57,8 @@ class TamanhoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('tamanho.tamanho_update' , ['tamanhos' => $tamanhos]);
     }
 
     /**
@@ -59,6 +66,7 @@ class TamanhoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        return view ('tamanho.tamanho_destroy' , ['tamanhos' => $tamanhos]);
     }
 }

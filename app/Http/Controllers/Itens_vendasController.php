@@ -13,10 +13,7 @@ class Itens_vendasController extends Controller
     {
         $itens_vendas = Item_venda::find(1);
         dd($itens_vendas->cobertura->nome);
-        //foreach ($itens_vendas as $key => $value) {
-            //dd($value);
-        //    echo($value->cobertura->nome);
-        //}
+        return view('itens_vendas.itensVendas_index', ['itens_vendas' => $itens_vendas]);
     }
 
     /**

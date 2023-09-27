@@ -1,4 +1,6 @@
 @extends('adminlte::page')
+
+@section('content')
 <div class="container">
     <h1>Cliente</h1>
     <strong>Nome:</strong> {{ $cliente->nome}}<br>
@@ -7,3 +9,5 @@
     <strong>Criação:</strong> {{$cliente->create_at}}<br>
 
 </div>
+
+@endsection
