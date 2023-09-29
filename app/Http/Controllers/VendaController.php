@@ -11,9 +11,8 @@ class VendaController extends Controller
      */
     public function index()
     {
-          
-        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('venda.venda_index' , ['vendas' => $vendas]);
+        $venda = Venda::orderBy('data')->get();
+        return view('venda.venda_index', ['venda' => $venda]);
     }
 
     /**
@@ -21,8 +20,7 @@ class VendaController extends Controller
      */
     public function create()
     {
-        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-          return view ('venda.venda_create' , ['vendas' => $vendas]);
+       return view('venda.venda_create');
     }
 
     /**
@@ -30,43 +28,70 @@ class VendaController extends Controller
      */
     public function store(Request $request)
     {
-        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('venda.venda_store' , ['vendas' => $vendas]);
+        $messages = [
+            'nome.required' => 'O :attribute é obrigatório!',
+            'valor.required' => 'O :attribute é obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nome'          => 'required|min:5',
+            'valor'         => 'required',
+            
+        ], $messages);
+
+        $vendas = new Venda();
+        $vendas->nome          = $request->nome;
+        $vendas->valor         = $request->valor;
+        $vendas->save();
+
+        return redirect()->route('venda.index')->with('status', 'Venda criada com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show()
-    {
-        $vendas = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('venda.venda_show' , ['vendas' => $vendas]);
+    public function show(string $id)
+    { 
+            $venda = Venda::find($id);
+            return view('venda.venda_show', ['venda' => $venda]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit(string $id)
     {
-        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('venda.venda_edit' , ['venda' => $venda]);
+        $venda = Venda::find($id);
+        //dd($venda);
+        return view('venda.venda_edit', ['venda' => $venda]);
     }
+    
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
-        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('venda.venda_update' , ['vendas' => $vendas]);
+        $validated = $request->validate([
+            'nome'         => 'required|min:5',
+            'valor'         => 'required',
+           ]);
+
+        $venda = Venda::find($id);
+        $venda->nome         = $request->nome;
+        $venda->valor         = $request->valor;
+        $venda->save();
+
+        return redirect('/venda')->with('status','Venda atualizada com sucesso!');
+
     }
+    
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('venda.venda_destroy' , ['vendas' => $vendas]);
+        $venda = Venda::find($id);
+        $venda->delete();
+        return redirect('/venda')->with('status','Venda excluída com sucesso!');
     }
 }

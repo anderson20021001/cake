@@ -22,6 +22,8 @@
       }
     </script>
 
+<a href="{{url('/cliente/create')}}">Criar</a>
+
   <!--<style>
     form {
       display:inline-block;
@@ -46,6 +48,9 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Celular</th>
+        <th scope="col">Endereço</th>
         <th scope="col">Ações</th>
       </tr>
     </thead>
@@ -54,6 +59,10 @@
     <tr>
     <td>{{$cliente->id}}</td>
       <td>{{$cliente->nome}}</td>
+      <td>{{$cliente->email}}</td>
+      <td>{{$cliente->celular}}</td>
+      <td>{{$cliente->endereco}}</td>
+
       <td>
 
         

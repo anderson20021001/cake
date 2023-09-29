@@ -1,6 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
+
 <div>
     Formulário de Criação:<br>
 
@@ -15,19 +16,22 @@
 @endif
 
 
-    <form method="POST" action="{{url('/cobertura/create')}}">
+    <form method="POST" action="{{ url('/itensvenda/' . $itensvenda->id . '/edit')  }}">
+        @method('PUT')
         @csrf
-
         
   <label for="fname">Nome:</label><br>
-  <input type="text" id="fname" name="nome"><br>
+  <input type="text" id="fname" name="nome" value="{{ $itensvenda->nome }}"><br>
 
   <label for="fname">Valor:</label><br>
-  <input type="text" id="fname" name="valor"><br>
+  <input type="text" id="fname" name="valor" value="{{ $itensvenda->valor }}"><br>
 
   <input type="submit" value="Enviar">
 
 </form>
+
+
+
 
 </div>
 @endsection

@@ -18,26 +18,22 @@
     <form method="POST" action="{{url('/cliente/create')}}">
         @csrf
 
-        <label for="cliente">Escolha uma categoria:</label>
-
-        <select name="cliente_id" id="cliente">
-             @foreach($clientes as $cliente)
-                <option value="{{ $cliente->id }}">{{ $cliente->nome }}</option>
-            @endforeach
-        </select>
-        <br>
         
   <label for="fname">Nome:</label><br>
   <input type="text" id="fname" name="nome"><br>
 
-  <label for="fname">Quantidade:</label><br>
-  <input type="text" id="fname" name="quantidade"><br>
+  <label for="fname">Email:</label><br>
+  <input type="text" id="fname" name="email"><br>
 
-  <label for="fname">Preço:</label><br>
-  <input type="text" id="fname" name="preco"><br>
+  <label for="fname">Celular:</label><br>
+  <input type="text" id="fname" name="celular"><br>
+
+  <label for="fname">Endereco:</label><br>
+  <input type="text" id="fname" name="endereco"><br>
 
   <input type="submit" value="Enviar">
 
 </form>
 
 </div>
+@endsection

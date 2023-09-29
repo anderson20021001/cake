@@ -4,9 +4,10 @@
 <div class="container">
     <h1>Cliente</h1>
     <strong>Nome:</strong> {{ $cliente->nome}}<br>
-    <strong>Quantidade:</strong> {{ $cliente->quantidade}}<br>
-    <strong>Preço:</strong> {{ $cliente->preco}}<br>
-    <strong>Criação:</strong> {{$cliente->create_at}}<br>
+    <strong>Email:</strong> {{ $cliente->email}}<br>
+    <strong>Celular:</strong> {{ $cliente->celular}}<br>
+    <strong>Endereço:</strong> {{ $cliente->endereco}}<br>
+    <strong>:</strong> {{$cliente->create_at}}<br>
 
 </div>
 

@@ -27,20 +27,13 @@ Route::get('/', function () {
 
 
 Route::get('/cliente',[ClienteController::class, 'index'])->name('cliente.index')->middleware('can:is_admin');
+Route::get('/cliente/create',[ClienteController::class, 'create'])->name('cliente.create')->middleware('can:is_admin');
+Route::post('/cliente/create',[ClienteController::class, 'store'])->name('cliente.store')->middleware('can:is_admin');
+Route::get('/cliente/{id}/edit',[ClienteController::class, 'edit'])->name('cliente.edit')->middleware('can:is_admin');
+Route::put('/cliente/{id}/edit',[ClienteController::class, 'update'])->name('cliente.update')->middleware('can:is_admin');
 Route::get('/cliente/{id}',[ClienteController::class, 'show'])->name('cliente.show')->middleware('can:is_admin');
-Route::get('/cliente/{id}/edit', [ClienteController::class, 'edit'])->name('cliente.edit')->middleware('can:is_admin');
-Route::put('/cliente/{id}/edit', [ClienteController::class, 'update'])->name('cliente.update')->middleware('can:is_admin');
-Route::delete('/cliente/{id}', [ClienteController::class, 'destroy'])->name('cliente.destroy')->middleware('can:is_admin');
+Route::delete('/cliente/{id}',[ClienteController::class, 'destroy'])->name('cliente.destroy')->middleware('can:is_admin');
 
-
-
-
-Route::get('/item',[Itens_vendasController::class, 'index'])->name('Intes_vendas.index')->middleware('can:is_admin');
-Route::get('/itens_vendas',[Itens_vendasController::class, 'store'])->name('Intes_vendas.store')->middleware('can:is_admin');
-Route::get('/itens_vendas',[Itens_vendasController::class, 'update'])->name('Intes_vendas.update')->middleware('can:is_admin');
-Route::get('/itens_vendas',[Itens_vendasController::class, 'destroy'])->name('Intes_vendas.destroy')->middleware('can:is_admin');
-Route::get('/itens_vendas',[Itens_vendasController::class, 'edit'])->name('Intes_vendas.edit')->middleware('can:is_admin');
-Route::get('/itens_vendas',[Itens_vendasController::class, 'show'])->name('Intes_vendas.show')->middleware('can:is_admin');
 
 
 Route::get('/massa',[MassaController::class, 'index'])->name('massa.index')->middleware('can:is_admin');
@@ -88,13 +81,22 @@ Route::get('/recheio',[RecheioController::class, 'edit'])->name('recheio.edit')-
 Route::get('/recheio',[RecheioController::class, 'show'])->name('recheio.show')->middleware('can:is_admin');
 
 
-Route::get('/venda',[DecoracaoController::class, 'index'])->name('venda.index')->middleware('can:is_admin');
-Route::post('/venda',[DecoracaoController::class, 'store'])->name('venda.store')->middleware('can:is_admin');
-//Route::get('/venda',[VendaController::class, 'update'])->name('venda.update')->middleware('can:is_admin');
-//Route::get('/venda',[VendaController::class, 'destroy'])->name('venda.destroy')->middleware('can:is_admin');
-Route::get('/venda',[VendaController::class, 'edit'])->name('venda.edit')->middleware('can:is_admin');
-//Route::get('/venda',[VendaController::class, 'show'])->name('venda.show')->middleware('can:is_admin');
+Route::get('/venda',[VendaController::class, 'index'])->name('venda.index')->middleware('can:is_admin');
+Route::get('/venda/create',[VendaController::class, 'create'])->name('venda.create')->middleware('can:is_admin');
+Route::post('/venda/create',[VendaController::class, 'store'])->name('venda.store')->middleware('can:is_admin');
+Route::get('/venda/{id}/edit',[VendaController::class, 'edit'])->name('venda.edit')->middleware('can:is_admin');
+Route::put('/venda/{id}/edit',[VendaController::class, 'update'])->name('venda.update')->middleware('can:is_admin');
+Route::get('/venda/{id}',[VendaController::class, 'show'])->name('venda.show')->middleware('can:is_admin');
+Route::delete('/venda/{id}',[VendaController::class, 'destroy'])->name('venda.destroy')->middleware('can:is_admin');
 
+
+Route::get('/itens_vendas',[VendaController::class, 'index'])->name('itens_vendas.index')->middleware('can:is_admin');
+Route::get('/itens_itens_vendas/create',[VendaController::class, 'create'])->name('itens_vendas.create')->middleware('can:is_admin');
+Route::post('/itens_vendas/create',[VendaController::class, 'store'])->name('itens_vendas.store')->middleware('can:is_admin');
+Route::get('/itens_vendas/{id}/edit',[VendaController::class, 'edit'])->name('itens_vendas.edit')->middleware('can:is_admin');
+Route::put('/itens_vendas/{id}/edit',[VendaController::class, 'update'])->name('itens_vendas.update')->middleware('can:is_admin');
+Route::get('/itens_vendas/{id}',[VendaController::class, 'show'])->name('itens_vendas.show')->middleware('can:is_admin');
+Route::delete('/itens_vendas/{id}',[VendaController::class, 'destroy'])->name('itens_vendas.destroy')->middleware('can:is_admin');
 
 Route::post('/produto/create', [ClienteController::class, 'store'])->middleware('can:is_admin');
 Route::get('/pedido',[PedidoController::class, 'index'])->name('pedido.index')->middleware('can:is_admin');

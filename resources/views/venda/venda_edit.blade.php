@@ -1,3 +1,7 @@
+@extends('adminlte::page')
+
+@section('content')
+
 <div>
     Formulário de Criação:<br>
 
@@ -12,34 +16,25 @@
 @endif
 
 
-    <form method="POST" action="{{ url('/venda/' . $venda ->id) }}">
+    <form method="POST" action="{{ url('/venda/' . $venda->id . '/edit')  }}">
         @method('PUT')
         @csrf
-        <form>
-        <label for="categoria">Escolha uma categoria:</label>
+        
+  <label for="fname">ID</label><br>
+  <input type="text" id="fname" name="nome" value="{{ $venda->id }}"><br>
 
-    <select name="categoria_id" id="categoria">
-     @foreach($categorias as $categoria)
-        <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
-            @if($categoria->id == $venda->categoria_id)
-            <option value="{{ $categoria->id }}" selected>{{ $categoria->nome}}</option>
-            @else
-            <option value="{{ $categoria->id }}"> {{ $categoria->nome}}</option>
-            @endif
-        @endforeach
-    </select>
+  <label for="fname">CLIENTE_ID</label><br>
+  <input type="text" id="fname" name="valor" value="{{ $venda->cliente_id }}"><br>
 
-  <label for="fname">Nome:</label><br>
-  <input type="text" id="fname" name="nome" value="{{$venda ->nome}}"><br>
-
-  <label for="fname">Quantidade:</label><br>
-  <input type="text" id="fname" name="quantidade" value="{{$venda ->quantidade}}"><br>
-
-  <label for="fname">Preço:</label><br>
-  <input type="text" id="fname" name="preco" value="{{$venda ->preco}}" ><br>
+  <label for="fname">DATA</label><br>
+  <input type="text" id="fname" name="valor" value="{{ $venda->data }}"><br>
 
   <input type="submit" value="Enviar">
 
 </form>
 
+
+
+
 </div>
+@endsection

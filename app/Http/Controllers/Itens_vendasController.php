@@ -1,19 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Item_venda;
+use App\Models\itens_vendas;
 use Illuminate\Http\Request;
 
-class Itens_vendasController extends Controller
+class itens_vendasController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $itens_vendas = Item_venda::find(1);
-        dd($itens_vendas->cobertura->nome);
-        return view('itens_vendas.itensVendas_index', ['itens_vendas' => $itens_vendas]);
+        $itens_vendas = itens_vendas::orderBy('nome')->get();
+       return view('itens_vendas.itens_vendas_index', ['itens_vendas' => $itens_vendas]);
     }
 
     /**
@@ -21,7 +20,7 @@ class Itens_vendasController extends Controller
      */
     public function create()
     {
-        //
+       return view('itens_vendas.itens_vendas_create');
     }
 
     /**
@@ -29,15 +28,32 @@ class Itens_vendasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $messages = [
+            'nome.required' => 'O :attribute é obrigatório!',
+            'valor.required' => 'O :attribute é obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nome'          => 'required|min:5',
+            'valor'         => 'required',
+            
+        ], $messages);
+
+        $itens_vendas = new itens_vendas();
+        $itens_vendas->nome          = $request->nome;
+        $itens_vendas->valor         = $request->valor;
+        $itens_vendas->save();
+
+        return redirect()->route('itens_vendas.index')->with('status', 'itens_vendas criada com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
     public function show(string $id)
-    {
-        //
+    { 
+            $itens_vendas = itens_vendas::find($id);
+            return view('itens_vendas.itens_vendas_show', ['itens_vendas' => $itens_vendas]);
     }
 
     /**
@@ -45,22 +61,37 @@ class Itens_vendasController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $itens_vendas = itens_vendas::find($id);
+        //dd($itens_vendas);
+        return view('itens_vendas.itens_vendas_edit', ['itens_vendas' => $itens_vendas]);
     }
+    
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'nome'         => 'required|min:5',
+            'valor'         => 'required',
+           ]);
+
+        $itens_vendas = itens_vendas::find($id);
+        $itens_vendas->nome         = $request->nome;
+        $itens_vendas->valor         = $request->valor;
+        $itens_vendas->save();
+
+        return redirect('/itens_vendas')->with('status','itens_vendas atualizada com sucesso!');
+
     }
+    
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        $itens_vendas = itens_vendas::find($id);
+        $itens_vendas->delete();
+        return redirect('/itens_vendas')->with('status','itens_vendas excluída com sucesso!');
     }
 }
