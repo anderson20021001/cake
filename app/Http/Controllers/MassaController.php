@@ -20,8 +20,7 @@ class MassaController extends Controller
      */
     public function create()
     {
-        $massa = Massa::orderBy('nome')->get();
-       return view('massa.massa_create', ['massas' => $massas]);
+       return view('massa.massa_create');
     }
 
     /**
@@ -31,21 +30,18 @@ class MassaController extends Controller
     {
         $messages = [
             'nome.required' => 'O :attribute é obrigatório!',
-            'quantidade.required' => 'O :attribute é obrigatório!',
-            'preco.required' => 'O :attribute é obrigatório!',
+            'valor.required' => 'O :attribute é obrigatório!',
         ];
 
         $validated = $request->validate([
             'nome'          => 'required|min:5',
-            'quantidade'    => 'required',
-            'preco'         => 'required',
+            'valor'         => 'required',
             
         ], $messages);
 
         $massas = new Massa();
         $massas->nome          = $request->nome;
-        $massas->quantidade    = $request->quantidade;
-        $massas->preco         = $request->preco;
+        $massas->valor         = $request->valor;
         $massas->save();
 
         return redirect()->route('massa.index')->with('status', 'Massa criada com sucesso!');
@@ -54,11 +50,10 @@ class MassaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(string $id)
     { 
-    
-            $massas = Massa::orderBy('nome')->get();
-            return view('massa.massa_show', ['massas' => $massas]);
+            $massa = Massa::find($id);
+            return view('massa.massa_show', ['massa' => $massa]);
     }
 
     /**
@@ -66,8 +61,9 @@ class MassaController extends Controller
      */
     public function edit(string $id)
     {
-        $massa = massa::orderBy('nome')->get();
-        return view('massa.edit', ['massa' => $massa]);
+        $massa = Massa::find($id);
+        //dd($massa);
+        return view('massa.massa_edit', ['massa' => $massa]);
     }
     
 
@@ -76,15 +72,15 @@ class MassaController extends Controller
     {
         $validated = $request->validate([
             'nome'         => 'required|min:5',
-           
+            'valor'         => 'required',
            ]);
 
-        $massa = Categoria::find($id);
-        $massa->nome         = $request->massa;
-  
+        $massa = Massa::find($id);
+        $massa->nome         = $request->nome;
+        $massa->valor         = $request->valor;
         $massa->save();
 
-        return redirect('/massa')->with('status','Categoria atualizado com sucesso!');
+        return redirect('/massa')->with('status','Massa atualizada com sucesso!');
 
     }
     
@@ -94,7 +90,8 @@ class MassaController extends Controller
      */
     public function destroy(string $id)
     {
-        $massa = Massa::orderBy('nome')->get();
-        return view('massa.massa_destroy', ['massas' => $massas]);
+        $massa = Massa::find($id);
+        $massa->delete();
+        return redirect('/massa')->with('status','Massa excluída com sucesso!');
     }
 }

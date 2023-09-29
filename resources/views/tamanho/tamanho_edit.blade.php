@@ -1,3 +1,7 @@
+@extends('adminlte::page')
+
+@section('content')
+
 <div>
     Formulário de Criação:<br>
 
@@ -12,34 +16,22 @@
 @endif
 
 
-    <form method="POST" action="{{ url('/tamanho/' . $tamanho ->id) }}">
+    <form method="POST" action="{{ url('/tamanho/' . $tamanho->id . '/edit')  }}">
         @method('PUT')
         @csrf
-        <form>
-        <label for="categoria">Escolha uma categoria:</label>
-
-    <select name="categoria_id" id="categoria">
-     @foreach($categorias as $categoria)
-        <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
-            @if($categoria->id == $tamanho->categoria_id)
-            <option value="{{ $categoria->id }}" selected>{{ $categoria->nome}}</option>
-            @else
-            <option value="{{ $categoria->id }}"> {{ $categoria->nome}}</option>
-            @endif
-        @endforeach
-    </select>
-
+        
   <label for="fname">Nome:</label><br>
-  <input type="text" id="fname" name="nome" value="{{$tamanho ->nome}}"><br>
+  <input type="text" id="fname" name="nome" value="{{ $tamanho->nome }}"><br>
 
-  <label for="fname">Quantidade:</label><br>
-  <input type="text" id="fname" name="quantidade" value="{{$tamanho ->quantidade}}"><br>
-
-  <label for="fname">Preço:</label><br>
-  <input type="text" id="fname" name="preco" value="{{$tamanho ->preco}}" ><br>
+  <label for="fname">Valor:</label><br>
+  <input type="text" id="fname" name="valor" value="{{ $tamanho->valor }}"><br>
 
   <input type="submit" value="Enviar">
 
 </form>
 
+
+
+
 </div>
+@endsection

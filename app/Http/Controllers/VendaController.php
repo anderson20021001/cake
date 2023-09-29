@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Venda;
 use Illuminate\Http\Request;
 
 class VendaController extends Controller
@@ -37,19 +37,19 @@ class VendaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
+        $vendas = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
         return view ('venda.venda_show' , ['vendas' => $vendas]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit()
     {
         $venda = Venda::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('venda.venda_edit' , ['vendas' => $vendas]);
+        return view ('venda.venda_edit' , ['venda' => $venda]);
     }
 
     /**

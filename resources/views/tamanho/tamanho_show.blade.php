@@ -1,8 +1,14 @@
+@extends('adminlte::page')
+
+@section('content')
+
+
 <div class="container">
     <h1>tamanho</h1>
-    <strong>Nome:</strong> {{ $tamanho->nome}}<br>
-    <strong>Quantidade:</strong> {{ $tamanho->quantidade}}<br>
-    <strong>Preço:</strong> {{ $tamanho->preco}}<br>
-    <strong>Criação:</strong> {{$tamanho->create_at}}<br>
+    <strong>ID:</strong> {{ $tamanho->id }}<br>
+    <strong>Nome:</strong> {{ $tamanho->nome }}<br>
+    <strong>Preço:</strong> {{ $tamanho->valor }}<br>
+    <strong>Criação:</strong> {{ $tamanho->create_at }}<br>
 
 </div>
+@endsection

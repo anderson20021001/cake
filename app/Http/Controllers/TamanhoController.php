@@ -11,9 +11,8 @@ class TamanhoController extends Controller
      */
     public function index()
     {
-          
-        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('tamanho.tamanho_index' , ['tamanho' => $tamanho]);
+        $tamanhos = Tamanho::orderBy('nome')->get();
+       return view('tamanho.tamanho_index', ['tamanhos' => $tamanhos]);
     }
 
     /**
@@ -21,8 +20,7 @@ class TamanhoController extends Controller
      */
     public function create()
     {
-        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-          return view ('tamanho.tamanho_create' , ['tamanhos' => $tamanhos]);
+       return view('tamanho.tamanho_create');
     }
 
     /**
@@ -30,17 +28,32 @@ class TamanhoController extends Controller
      */
     public function store(Request $request)
     {
-        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('tamanho.tamanho_store' , ['tamanhos' => $tamanhos]);
+        $messages = [
+            'nome.required' => 'O :attribute é obrigatório!',
+            'valor.required' => 'O :attribute é obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nome'          => 'required|min:5',
+            'valor'         => 'required',
+            
+        ], $messages);
+
+        $tamanhos = new Tamanho();
+        $tamanhos->nome          = $request->nome;
+        $tamanhos->valor         = $request->valor;
+        $tamanhos->save();
+
+        return redirect()->route('tamanho.index')->with('status', 'Tamanho criada com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
     public function show(string $id)
-    {
-        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('tamanho.tamanho_show' , ['tamanhos' => $tamanhos]);
+    { 
+            $tamanho = Tamanho::find($id);
+            return view('tamanho.tamanho_show', ['tamanho' => $tamanho]);
     }
 
     /**
@@ -48,25 +61,37 @@ class TamanhoController extends Controller
      */
     public function edit(string $id)
     {
-        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('tamanho.tamanho_edit' , ['tamanhos' => $tamanhos]);
+        $tamanho = Tamanho::find($id);
+        //dd($tamanho);
+        return view('tamanho.tamanho_edit', ['tamanho' => $tamanho]);
     }
+    
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
-        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('tamanho.tamanho_update' , ['tamanhos' => $tamanhos]);
+        $validated = $request->validate([
+            'nome'         => 'required|min:5',
+            'valor'         => 'required',
+           ]);
+
+        $tamanho = Tamanho::find($id);
+        $tamanho->nome         = $request->nome;
+        $tamanho->valor         = $request->valor;
+        $tamanho->save();
+
+        return redirect('/tamanho')->with('status','Tamanho atualizada com sucesso!');
+
     }
+    
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        $tamanho = Tamanho::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('tamanho.tamanho_destroy' , ['tamanhos' => $tamanhos]);
+        $tamanho = Tamanho::find($id);
+        $tamanho->delete();
+        return redirect('/tamanho')->with('status','Tamanho excluída com sucesso!');
     }
 }

@@ -18,26 +18,16 @@
     <form method="POST" action="{{url('/massa/create')}}">
         @csrf
 
-        <label for="categoria">Escolha uma categoria:</label>
-
-        <select name="categoria_id" id="categoria">
-             @foreach($categorias as $categoria)
-                <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
-            @endforeach
-        </select>
-        <br>
         
   <label for="fname">Nome:</label><br>
   <input type="text" id="fname" name="nome"><br>
 
-  <label for="fname">Quantidade:</label><br>
-  <input type="text" id="fname" name="quantidade"><br>
-
-  <label for="fname">Preço:</label><br>
-  <input type="text" id="fname" name="preco"><br>
+  <label for="fname">Valor:</label><br>
+  <input type="text" id="fname" name="valor"><br>
 
   <input type="submit" value="Enviar">
 
 </form>
 
 </div>
+@endsection

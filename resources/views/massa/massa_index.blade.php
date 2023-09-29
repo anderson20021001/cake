@@ -50,7 +50,6 @@
       <th scope="col">ID</th>
       <th scope="col">Nome</th>
       <th scope="col">Valor</th>
-      <th scope="col">Quantidade</th>
       <th scope="col">Ações</th>
     </tr>
   </thead>
@@ -59,8 +58,8 @@
   <tr>
    <td>{{$massa->id}}</td>
     <td>{{$massa->nome}}</td>
-    <td>{{$massa->preco}}</td>
-    <td>{{$massa->quantidade}}</td>
+    <td>{{$massa->valor}}</td>
+   
 
     <td>
       <div id="estilo">

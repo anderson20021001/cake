@@ -11,8 +11,8 @@ class DecoracaoController extends Controller
      */
     public function index()
     {
-        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('decoracao.decoracao_index' , ['decoracao' => $decoracao]);
+        $decoracaos = Decoracao::orderBy('nome')->get();
+       return view('decoracao.decoracao_index', ['decoracaos' => $decoracaos]);
     }
 
     /**
@@ -20,8 +20,7 @@ class DecoracaoController extends Controller
      */
     public function create()
     {
-        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('decoracao.decoracao_create' , ['decoracoes' => $decoracoes]);
+       return view('decoracao.decoracao_create');
     }
 
     /**
@@ -29,17 +28,32 @@ class DecoracaoController extends Controller
      */
     public function store(Request $request)
     {
-        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('decoracao.decoracao_request' , ['decoracao' => $decoracao]);
+        $messages = [
+            'nome.required' => 'O :attribute é obrigatório!',
+            'valor.required' => 'O :attribute é obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nome'          => 'required|min:5',
+            'valor'         => 'required',
+            
+        ], $messages);
+
+        $decoracao = new Decoracao();
+        $decoracao->nome          = $request->nome;
+        $decoracao->valor         = $request->valor;
+        $decoracao->save();
+
+        return redirect()->route('decoracao.index')->with('status', 'Decoracao criada com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
     public function show(string $id)
-    {
-        $Decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('decoracao.decoracao_show' , ['decoracao' => $decoracao]);
+    { 
+            $decoracao = Decoracao::find($id);
+            return view('decoracao.decoracao_show', ['decoracao' => $decoracao]);
     }
 
     /**
@@ -47,25 +61,37 @@ class DecoracaoController extends Controller
      */
     public function edit(string $id)
     {
-        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('dliente.decoracao_id' , ['decoracao' => $decoracao]);
+        $decoracao = Decoracao::find($id);
+        //dd($decoracao);
+        return view('decoracao.decoracao_edit', ['decoracao' => $decoracao]);
     }
+    
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
-        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('decoracao.decoracao_update' , ['decoracoes' => $decoracoes]);
+        $validated = $request->validate([
+            'nome'         => 'required|min:5',
+            'valor'         => 'required',
+           ]);
+
+        $decoracao = Decoracao::find($id);
+        $decoracao->nome         = $request->nome;
+        $decoracao->valor         = $request->valor;
+        $decoracao->save();
+
+        return redirect('/decoracao')->with('status','Decoracao atualizada com sucesso!');
+
     }
+    
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        $decoracao = Decoracao::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('decoracao.decoracao_destroy' , ['decoracoes' => $decoracoes]);
+        $decoracao = Decoracao::find($id);
+        $decoracao->delete();
+        return redirect('/decoracao')->with('status','Decoracao excluída com sucesso!');
     }
 }

@@ -11,9 +11,8 @@ class CoberturaController extends Controller
      */
     public function index()
     {
-          
-        $coberturas = Cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cobertura.cobertura_index' , ['coberturas' => $coberturas]);
+        $coberturas = Cobertura::orderBy('nome')->get();
+       return view('cobertura.cobertura_index', ['coberturas' => $coberturas]);
     }
 
     /**
@@ -21,8 +20,7 @@ class CoberturaController extends Controller
      */
     public function create()
     {
-        $cobertura = Cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-          return view ('cobertura.cobertura_create' , ['coberturas' => $coberturas]);
+       return view('cobertura.cobertura_create');
     }
 
     /**
@@ -30,17 +28,32 @@ class CoberturaController extends Controller
      */
     public function store(Request $request)
     {
-        $cobertura = Cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('coberturas.cobertura_store' , ['coberturas' => $coberturas]);
+        $messages = [
+            'nome.required' => 'O :attribute é obrigatório!',
+            'valor.required' => 'O :attribute é obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nome'          => 'required|min:5',
+            'valor'         => 'required',
+            
+        ], $messages);
+
+        $coberturas = new Cobertura();
+        $coberturas->nome          = $request->nome;
+        $coberturas->valor         = $request->valor;
+        $coberturas->save();
+
+        return redirect()->route('cobertura.index')->with('status', 'Cobertura criada com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
     public function show(string $id)
-    {
-        $cobertura = Cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cobertura.cobertura_show' , ['coberturas' => $coberturas]);
+    { 
+            $cobertura = Cobertura::find($id);
+            return view('cobertura.cobertura_show', ['cobertura' => $cobertura]);
     }
 
     /**
@@ -48,25 +61,37 @@ class CoberturaController extends Controller
      */
     public function edit(string $id)
     {
-        $cobertura = Cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cobertura.cobertura_edit' , ['coberturas' => $coberturas]);
+        $cobertura = Cobertura::find($id);
+        //dd($cobertura);
+        return view('cobertura.cobertura_edit', ['cobertura' => $cobertura]);
     }
+    
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
-        $cobertura = Cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cobertura.cobertura_update' , ['coberturas' => $coberturas]);
+        $validated = $request->validate([
+            'nome'         => 'required|min:5',
+            'valor'         => 'required',
+           ]);
+
+        $cobertura = Cobertura::find($id);
+        $cobertura->nome         = $request->nome;
+        $cobertura->valor         = $request->valor;
+        $cobertura->save();
+
+        return redirect('/cobertura')->with('status','Cobertura atualizada com sucesso!');
+
     }
+    
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        $cobertura = Cobertura::OrderBy('nome','ASC')->get(); //pluck('nome', 'id' );
-        return view ('cobertura.cobertura_destroy' , ['coberturas' => $coberturas]);
+        $cobertura = Cobertura::find($id);
+        $cobertura->delete();
+        return redirect('/cobertura')->with('status','Cobertura excluída com sucesso!');
     }
 }
