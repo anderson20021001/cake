@@ -48,9 +48,9 @@
                         <div class="mb-3">
                             <label for="quantidadeProduto1" class="form-label">Quantidade:</label>
                             <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto1"><img src="dash.svg" alt="Decrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto1"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
                                 <input type="number" id="quantidadeProduto1" name="quantidadeProduto1" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto1"><img src="plus-lg.svg" alt="Incrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto1"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
@@ -72,9 +72,9 @@
                         <div class="mb-3">
                             <label for="quantidadeProduto2" class="form-label">Quantidade:</label>
                             <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto2"><img src="dash.svg" alt="Decrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto2"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
                                 <input type="number" id="quantidadeProduto2" name="quantidadeProduto2" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto2"><img src="plus-lg.svg" alt="Incrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto2"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
@@ -96,9 +96,9 @@
                         <div class="mb-3">
                             <label for="quantidadeProduto3" class="form-label">Quantidade:</label>
                             <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto3"><img src="dash.svg" alt="Decrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto3"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
                                 <input type="number" id="quantidadeProduto3" name="quantidadeProduto3" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto3"><img src="plus-lg.svg" alt="Incrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto3"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
@@ -120,9 +120,9 @@
                         <div class="mb-3">
                             <label for="quantidadeProduto4" class="form-label">Quantidade:</label>
                             <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto4"><img src="dash.svg" alt="Decrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto4"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
                                 <input type="number" id="quantidadeProduto4" name="quantidadeProduto4" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto4"><img src="plus-lg.svg" alt="Incrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto4"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
@@ -144,9 +144,9 @@
                         <div class="mb-3">
                             <label for="quantidadeProduto5" class="form-label">Quantidade:</label>
                             <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto5"><img src="dash.svg" alt="Decrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto5"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
                                 <input type="number" id="quantidadeProduto5" name="quantidadeProduto5" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto5"><img src="plus-lg.svg" alt="Incrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto5"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
@@ -168,9 +168,9 @@
                         <div class="mb-3">
                             <label for="quantidadeProduto6" class="form-label">Quantidade:</label>
                             <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto6"><img src="dash.svg" alt="Decrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto6"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
                                 <input type="number" id="quantidadeProduto6" name="quantidadeProduto6" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto6"><img src="{{ url('/imagens/mais.jpg')}}" alt="Incrementar"></button>
+                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto6"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Adicionar ao Carrinho</button>
