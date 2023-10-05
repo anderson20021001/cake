@@ -161,7 +161,11 @@
                 <img src="{{ url('/imagens/cake3.jpg')}}" class="card-img-top" alt="Produto 6">
                 <div class="card-body">
                     <h5 class="card-title">Nome do Produto 6</h5>
-                    <p class="card-text">Descrição do Produto 6</p>
+                    <p class="card-text">Descrição do Produto</p>
+                    <p class="card-text">Tamanho: Médio 15 à 25 fatias</p>
+                    <p class="card-text">Massa: Médio 15 à 25 fatias</p>
+                    <p class="card-text">Recheio: Médio 15 à 25 fatias</p>
+                    <p class="card-text">Decoração: Médio 15 à 25 fatias</p>
                     <p class="card-text">Preço: R$ 90,00</p>
                     <!-- Formulário para seleção de quantidade -->
                     <form class="d-flex">
