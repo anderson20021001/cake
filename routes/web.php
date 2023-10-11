@@ -9,6 +9,7 @@ use App\Http\Controllers\TamanhoController;
 use App\Http\Controllers\DecoracaoController;
 use App\Http\Controllers\VendaController;
 use App\Http\Controllers\CoberturaController;
+use App\Http\Controllers\EmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,5 +110,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('can:is_admin');
 
-
+Route::get('email/create', [EmailController::class,'create'])->name('email.create');
+Route::post('email/create', [EmailController::class,'store'])->name('email.store');
 
