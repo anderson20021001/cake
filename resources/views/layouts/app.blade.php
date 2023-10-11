@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   <style>
         /* Estilo para as imagens do carrossel */
         .carousel-inner img {
@@ -14,6 +15,38 @@
             height: 880px; /* Altura fixa para todas as imagens */
             object-fit: cover; /* Redimensiona a imagem para cobrir o espaço */
         }
+            .cards-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .card img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .card {
+        width: 25%;
+        margin: 0 0.5em;
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+        border: none;
+        border-radius: 0;
+    }
+    .carousel-inner {
+        padding: 1em;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        background-color: #e1e1e1;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @media (min-width: 768px) {
+        .card img {
+        height: 11em;
+        }
+    }
     </style>
 </head>
 <body>
@@ -33,7 +66,7 @@
                     <a class="nav-link" href="#" style="color: #ffffff;">Produto</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#" style="color: #ffffff;">Fazer Pedido</a>
+                    <a class="nav-link" href="{{ url('/fazerPedido') }}" style="color: #ffffff;">Fazer Pedido</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="#" style="color: #ffffff;">Contato</a>

@@ -103,6 +103,8 @@ Route::get('/pedido',[PedidoController::class, 'index'])->name('pedido.index')->
 Route::get('/pedido/create',[PedidoController::class, 'create'])->name('pedido.index')->middleware('can:is_admin');
 Route::post('/pedido/create',[PedidoController::class, 'store'])->name('pedido.index')->middleware('can:is_admin');
 
+Route::get('/fazerPedido',[PedidoController::class, 'fazerPedido'])->name('fazerPedido');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('can:is_admin');

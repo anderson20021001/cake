@@ -3,9 +3,34 @@
 namespace App\Http\Controllers;
 use App\Models\Pedido;
 use Illuminate\Http\Request;
+use App\Models\Tipo;
+use App\Models\Tamanho;
+use App\Models\Massa;
+use App\Models\Recheio;
+use App\Models\Decoracao;
+use App\Models\Cobertura;
+
 
 class PedidoController extends Controller
 {
+
+    public function fazerPedido()
+    {
+
+        //dd('fazerPedido');
+        //$tipos = Tipo::get();
+        $tamanhos = Tamanho::orderBy('nome','ASC')->get();
+        $massas = Massa::get();
+        $recheios = Recheio::get();
+        $decoracoes = Decoracao::get();
+        $coberturas = Cobertura::get();
+        return view('fazerPedido', ['tamanhos' => $tamanhos,
+                                    'massas' => $massas,
+                                    'recheios' => $recheios,
+                                    'decoracoes' => $decoracoes,
+                                    'coberturas' => $coberturas
+                                    ]);
+    }
     /**
      * Display a listing of the resource.
      */

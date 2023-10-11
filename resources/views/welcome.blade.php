@@ -34,156 +34,200 @@
     </a>
 </div>
 
-<div class="container mt-4 ">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url('/imagens/cake1.jpg')}}" class="card-img-top" alt="Produto 1">
-                <div class="card-body">
-<h5 class="card-title">Nome do Produto 1</h5>
-                    <p class="card-text">Descrição do Produto 1</p>
-                    <p class="card-text">Preço: R$ 50,00</p>
-                    <!-- Formulário para seleção de quantidade -->
-                    <form class="d-flex">
-                        <div class="mb-3">
-                            <label for="quantidadeProduto1" class="form-label">Quantidade:</label>
-                            <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto1"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
-                                <input type="number" id="quantidadeProduto1" name="quantidadeProduto1" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto1"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
-            </div>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="cards-wrapper">
+      <div class="card">
+        <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="Produto 2">
-                <div class="card-body">
-                    <h5 class="card-title">Nome do Produto 2</h5>
-                    <p class="card-text">Descrição do Produto 2</p>
-                    <p class="card-text">Preço: R$ 40,00</p>
-                    <!-- Formulário para seleção de quantidade -->
-                    <form class="d-flex">
-                        <div class="mb-3">
-                            <label for="quantidadeProduto2" class="form-label">Quantidade:</label>
-                            <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto2"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
-                                <input type="number" id="quantidadeProduto2" name="quantidadeProduto2" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto2"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
-            </div>
+      </div>
+      <div class="card d-none d-md-block">
+        <img src="{{ url('/imagens/cake3.jpg')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url('/imagens/cake3.jpg')}}" class="card-img-top" alt="Produto 3">
-                <div class="card-body">
-                    <h5 class="card-title">Nome do Produto 3</h5>
-                    <p class="card-text">Descrição do Produto 3</p>
-                    <p class="card-text">Preço: R$ 60,00</p>
-                    <!-- Formulário para seleção de quantidade -->
-                    <form class="d-flex">
-                        <div class="mb-3">
-                            <label for="quantidadeProduto3" class="form-label">Quantidade:</label>
-                            <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto3"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
-                                <input type="number" id="quantidadeProduto3" name="quantidadeProduto3" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto3"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
-            </div>
+      </div>
+      <div class="card d-none d-md-block">
+        <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-
-        <!-- Card 4 -->
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url('/imagens/cake1.jpg')}}" class="card-img-top" alt="Produto 4">
-                <div class="card-body">
-                    <h5 class="card-title">Nome do Produto 4</h5>
-                    <p class="card-text">Descrição do Produto 4</p>
-                    <p class="card-text">Preço: R$ 70,00</p>
-                    <!-- Formulário para seleção de quantidade -->
-                    <form class="d-flex">
-                        <div class="mb-3">
-                            <label for="quantidadeProduto4" class="form-label">Quantidade:</label>
-                            <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto4"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
-                                <input type="number" id="quantidadeProduto4" name="quantidadeProduto4" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto4"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="Produto 5">
-                <div class="card-body">
-                    <h5 class="card-title">Nome do Produto 5</h5>
-                    <p class="card-text">Descrição do Produto 5</p>
-                    <p class="card-text">Preço: R$ 80,00</p>
-                    <!-- Formulário para seleção de quantidade -->
-                    <form class="d-flex">
-                        <div class="mb-3">
-                            <label for="quantidadeProduto5" class="form-label">Quantidade:</label>
-                            <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto5"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
-                                <input type="number" id="quantidadeProduto5" name="quantidadeProduto5" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto5"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url('/imagens/cake3.jpg')}}" class="card-img-top" alt="Produto 6">
-                <div class="card-body">
-                    <h5 class="card-title">Nome do Produto 6</h5>
-                    <p class="card-text">Descrição do Produto</p>
-                    <p class="card-text">Tamanho: Médio 15 à 25 fatias</p>
-                    <p class="card-text">Massa: Médio 15 à 25 fatias</p>
-                    <p class="card-text">Recheio: Médio 15 à 25 fatias</p>
-                    <p class="card-text">Decoração: Médio 15 à 25 fatias</p>
-                    <p class="card-text">Preço: R$ 90,00</p>
-                    <!-- Formulário para seleção de quantidade -->
-                    <form class="d-flex">
-                        <div class="mb-3">
-                            <label for="quantidadeProduto6" class="form-label">Quantidade:</label>
-                            <div class="input-group">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="decrementProduto6"><img src="{{ url('/imagens/menos.svg')}}" alt="Decrementar"></button>
-                                <input type="number" id="quantidadeProduto6" name="quantidadeProduto6" class="form-control w-50" value="1" min="1">
-                                <button type="button" class="btn btn-outline-secondary w-25" id="incrementProduto6"><img src="{{ url('/imagens/mais.svg')}}" alt="Incrementar"></button>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <img src="{{ url('/imagens/cake1.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="{{ url('/imagens/cake3.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="{{ url('/imagens/cake1.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="{{ url('/imagens/cake3.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
 </div>
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="cards-wrapper">
+      <div class="card">
+        <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card d-none d-md-block">
+        <img src="{{ url('/imagens/cake1.jpg')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card d-none d-md-block">
+        <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <img src="{{ url('/imagens/cake3.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="{{ url('/imagens/cake1.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <img src="{{ url('/imagens/cake3.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="{{ url('/imagens/cake1.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
+</div>
+
 
 <footer class="bg-dark text-light">
         <div class="container-fluid py-3">
