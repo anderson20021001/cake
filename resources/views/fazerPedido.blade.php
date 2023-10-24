@@ -2,88 +2,160 @@
 
 @section('content')
 
-<!-- Formulário --> 
+    <!-- Formulário --> 
+    <!-- Container principal -->
+  <div class="container">
 
-<form id="form" method="get" action="."> 
-<!-- Nome completo --> 
-<div class="form-input"> 
-  <label>Nome Completo</label> 
-  <input type="text" id="nome-completo" placeholder="Digite o seu nome completo..."/> 
-  <small></small> 
-</div> 
+<!-- Cabeçalho -->
+<style>
+      body{
+         background-color:#ffffe0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form-input {
+        width: 100%;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      fieldset {
+        border: 1px solid #000; /* Adiciona uma borda ao fieldset */
+        border-radius: 0; /* Remove cantos arredondados (caso haja) */
+        padding: 10px; /* Adiciona espaço interno para melhor aparência */
+        width: 700px;
+        max-width: 700px; /* Largura máxima para o fieldset */
+        margin: 0 auto; /* Centraliza horizontalmente */
+        border: 1px solid #2E64FE ;
+        
+      }
+      legend {
+        text-align: center;
+        border: 1px solid black;
+        border-radius:10px ;
+        width: 200px;
+        background-color: #2E64FE;
+      }
+      input, select {
+        border: none; /* Remove a borda padrão */
+        border-bottom: 1px solid #000; /* Adiciona uma borda na parte inferior */
+        border-radius: 0; /* Remove cantos arredondados (caso haja) */
+        padding: 5px;
+        width: 100%;
+      }
+      label{
+        color: white;
+      }
+      .borda{
+        background-color:#ffffe0;
+        width: 900px;
+        border-radius:10px;
+        margin-top:30px;   
+      }
 
-<!-- Endereço --> 
+      input{
+         border-radius:10px;
+      }
+      .posicionamento{
+        display:flex;
+        padding: 10px;
+      }
+      #esquerda{
+        margin-right: 10px;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Pedido</title>
+  </head>
+  <body>
+  <!-- Container principal -->
+  <div class="container">
 
-<div class="form-input"> 
-    <br> 
-  <label>Endereço</label> 
-  <input type="text" id="endereco" placeholder="Digite o seu endereço..."/> 
-  <small></small> 
-</div> 
-<!-- Número --> 
+    <!-- Cabeçalho -->
+    <div class="cabecalho">
+    </div>
 
-<div class="form-input"> 
-    <br> 
-  <label>Número</label> 
-  <input type="text" id="numero" placeholder="Digite o número de sua residência..."/> 
-  <small></small> 
-</div> 
-<!-- Bairro --> 
+    <!-- Formulário -->
+    <div class="borda">
+    <form id="form" method="get" action=".">
+      <fieldset>
+        <legend>Formulário do Cliente</legend>
 
-<div class="form-input"> 
-    <br> 
-  <label>Bairro</label> 
-  <input type="text" id="bairro" placeholder="Digite o seu bairro..."/> 
-  <small></small> 
-</div> 
-<!-- Cidade --> 
+        <!-- Nome completo -->
+        <div class="form-input">
+          <label for="nome-completo">Nome Completo</label>
+          <input type="text" id="nome-completo" placeholder="Digite o seu nome completo..." />
+          <small></small>
+        </div>
 
-<div class="form-input"> 
-    <br> 
-  <label>Cidade</label> 
-  <input type="text" id="cidade" placeholder="Digite a sua cidade..."/> 
-  <small></small> 
-</div> 
-<!-- Estado --> 
-<div class="form-input"> 
-    <br> 
-  <label>Estado</label> 
-  <select id="estado" name="estado"> 
-    <option value="RJ">Rio de Janeiro</option> 
-  </select> 
-  <small></small> 
-</div> 
-<!-- Telefone --> 
+        <!-- Endereço -->
+        <div class="form-input">
+          <label for="endereco">Endereço</label>
+          <input type="text" id="endereco" placeholder="Digite o seu endereço..." />
+          <small></small>
+        </div>
 
-<div class="form-input"> 
-    <br> 
-  <label>Telefone</label> 
-  <input type="text" id="Telefone" placeholder="Digite o seu Telefone..."/> 
-  <small></small> 
-</div> 
-<!-- E-mail --> 
+        <!-- Número -->
+        <div class="form-input">
+          <label for="numero">Número</label>
+          <input type="text" id="numero" placeholder="Digite o número de sua residência..." />
+          <small></small>
+        </div>
 
-<div class="form-input"> 
-    <br> 
-    <label>E-mail</label> 
+        <!-- Bairro -->
+        <div class="form-input">
+          <label for="bairro">Bairro</label>
+          <input type="text" id="bairro" placeholder="Digite o seu bairro..." />
+          <small></small>
+        </div>
 
-          <input type="text" id="E-mail" placeholder="Digite o seu E-mail.../> 
+        <!-- Cidade -->
+        <div class="form-input">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" placeholder="Digite a sua cidade..." />
+          <small></small>
+        </div>
 
-           
+        <!-- Estado -->
+        <div class="form-input">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado">
+            <option value="RJ">Rio de Janeiro</option>
+          </select>
+          <small></small>
+        </div>
 
-          <small></small> 
+        <!-- Telefone -->
+        <div class="form-input">
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" placeholder="Digite o seu Telefone..." />
+          <small></small>
+        </div>
 
-        </div> 
+        <!-- E-mail -->
+        <div class="form-input">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="Digite o seu E-mail..." />
+          <small></small>
+        </div>
+        <div class="posicionamento">
+          <input type="submit" value="Voltar" id="esquerda">
+          <input type="submit" value="Avançar" id="direita">
+        </div>
+      </fieldset>
+    
+    </form>
 
-
-
-       
-
-      <div class="form-group> 
-
-       
-
-<h2>Vamos montar o seu Bolo?</h2> 
+   
+    
+  </div>
+  
+  
+    </div>
+    <h2>Vamos montar o seu Bolo?</h2> 
 
       </div> 
 
@@ -217,6 +289,9 @@
       </form> 
     </div>
 
+
+
+
 <footer class="bg-dark text-light">
         <div class="container-fluid py-3">
             <div class="row">
@@ -245,6 +320,5 @@
             &copy 2018 Copyright: <a href="#">Lojas Virtuais</a>
         </div>
     </footer>
-
-
+    
 @endsection
