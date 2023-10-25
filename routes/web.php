@@ -104,7 +104,8 @@ Route::get('/pedido',[PedidoController::class, 'index'])->name('pedido.index')->
 Route::get('/pedido/create',[PedidoController::class, 'create'])->name('pedido.index')->middleware('can:is_admin');
 Route::post('/pedido/create',[PedidoController::class, 'store'])->name('pedido.index')->middleware('can:is_admin');
 
-Route::get('/fazerPedido',[PedidoController::class, 'fazerPedido'])->name('fazerPedido');
+Route::get('/cadastroCliente',[PedidoController::class, 'cadastroCliente'])->name('cadastroCliente');
+Route::post('/fazerPedido',[PedidoController::class, 'fazerPedido'])->name('fazerPedido');
 
 Auth::routes();
 

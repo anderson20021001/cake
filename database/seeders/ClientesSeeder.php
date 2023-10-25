@@ -14,10 +14,14 @@ class ClientesSeeder extends Seeder
     public function run(): void
     {
         DB::table('clientes')->insert([
-            'nome' => 'Anderson',
-            'email' => 'anderson@gmail.com',
+            'nomeCompleto' => 'Anderson André',
             'endereco' => 'Rua Beija Flor',
-            'celular' => '9999999999',
+            'numero'    => '20',
+            'bairro' => 'Botafogo',
+            'cidade'    => 'Rio de Janeiro',
+            'estado'    => 'RJ',
+            'email' => 'anderson@gmail.com',
+            'telefone' => '9999999999'
             
         ]);
     }

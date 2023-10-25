@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             CoberturasSeeder::class,
             PedidoSeeder::class,
             UserSeeder::class,
+            TipoSeeder::class,
 
         ]);
     }

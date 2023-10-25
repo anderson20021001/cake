@@ -13,10 +13,14 @@ return new class extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nome');
-            $table->string('email');
-            $table->string('celular');
+            $table->string('nomeCompleto');
             $table->string('endereco');
+            $table->integer('numero');
+            $table->string('bairro');
+            $table->string('cidade');
+            $table->string('estado');
+            $table->string('email');
+            $table->string('telefone');
             $table->timestamps();
 
         });

@@ -9,27 +9,47 @@ use App\Models\Massa;
 use App\Models\Recheio;
 use App\Models\Decoracao;
 use App\Models\Cobertura;
+use App\Models\Cliente;
+
 
 
 class PedidoController extends Controller
 {
 
-    public function fazerPedido()
-    {
+    public function cadastroCliente(){
 
-        //dd('fazerPedido');
-        //$tipos = Tipo::get();
-        $tamanhos = Tamanho::orderBy('nome','ASC')->get();
-        $massas = Massa::get();
-        $recheios = Recheio::get();
-        $decoracoes = Decoracao::get();
-        $coberturas = Cobertura::get();
-        return view('fazerPedido', ['tamanhos' => $tamanhos,
-                                    'massas' => $massas,
-                                    'recheios' => $recheios,
-                                    'decoracoes' => $decoracoes,
-                                    'coberturas' => $coberturas
-                                    ]);
+        return view('cadastroCliente');
+    }
+
+    public function fazerPedido(Request $request)
+    {
+            //dd($request->all());
+            $cliente = new Cliente;
+            $cliente->nomeCompleto = $request->nomeCompleto;
+            $cliente->endereco = $request->endereco; 
+            $cliente->numero = $request->numero;
+            $cliente->bairro = $request->bairro;  
+            $cliente->cidade = $request->cidade; 
+            $cliente->estado = $request->estado; 
+            $cliente->telefone = $request->telefone; 
+            $cliente->email = $request->email; 
+            $cliente->save();
+
+            $tipos = Tipo::get();
+            $tamanhos = Tamanho::orderBy('nome','ASC')->get();
+            $massas = Massa::get();
+            $recheios = Recheio::get();
+            $decoracoes = Decoracao::get();
+            $coberturas = Cobertura::get();
+            return view('cadastroPedido', ['tamanhos' => $tamanhos,
+                                            'tipos' => $tipos,
+                                        'massas' => $massas,
+                                        'recheios' => $recheios,
+                                        'decoracoes' => $decoracoes,
+                                        'coberturas' => $coberturas
+                                        ]);
+    
+
     }
     /**
      * Display a listing of the resource.

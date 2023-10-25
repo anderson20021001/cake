@@ -31,7 +31,7 @@
                     <a class="nav-link" href="#" style="color: #ffffff;">Produto</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="{{ url('/fazerPedido') }}" style="color: #ffffff;">Fazer Pedido</a>
+                    <a class="nav-link" href="{{ url('/cadastroCliente') }}" style="color: #ffffff;">Fazer Pedido</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="#" style="color: #ffffff;">Contato</a>
