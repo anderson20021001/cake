@@ -66,6 +66,7 @@
       #esquerda{
         margin-right: 10px;
       }
+      
     </style>
     <link rel="stylesheet" href="styles.css"/>
     <title>Pedido</title>
