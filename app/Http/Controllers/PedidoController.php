@@ -51,6 +51,47 @@ class PedidoController extends Controller
     
 
     }
+
+    public function cliente_store(Request $request)
+    {
+        //dd($request->all());
+        $messages = [
+            'nomeCompleto.required' => 'O :attribute é obrigatório!',
+            'endereco.required' => 'O :attribute é obrigatório!',
+            'numero.required' => 'O :attribute é obrigatório!',
+            'bairro.required' => 'O :attribute é obrigatório!',
+            'cidade.required' => 'O :attribute é obrigatório!',
+            'estado.required' => 'O :attribute é obrigatório!',
+            'bairro.required' => 'O :attribute é obrigatório!',
+            'telefone.required' => 'O :attribute é obrigatório!',
+            'email.required' => 'O :attribute é obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nomeCompleto'          => 'required|min:5',
+            'endereco'    => 'required',
+            'numero'         => 'required',
+            'bairro' => 'required',
+            'cidade' => 'required',
+            'estado' => 'required',
+            'bairro' => 'required',
+            'telefone' => 'required',
+            'email' => 'required',
+        ], $messages);
+
+        $cliente = new Cliente();
+        $cliente->nomeCompleto          = $request->nomeCompleto;
+        $cliente->endereco    = $request->endereco;
+        $cliente->bairro         = $request->bairro;
+        $cliente->cidade  = $request->cidade;
+        $cliente->estado  = $request->estado;
+        $cliente->bairro  = $request->bairro;
+        $cliente->telefone  = $request->telefone;
+        $cliente->email  = $request->email;
+        $cliente->save();
+
+        return redirect()->route('cliente.index')->with('status', 'Produto criado com sucesso!');
+    }
     /**
      * Display a listing of the resource.
      */
