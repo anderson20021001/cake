@@ -72,8 +72,20 @@
     <title>Pedido</title>
   </head>
   <body>
+
+  
   <!-- Container principal -->
   <div class="container">
+
+  @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
     <!-- Cabeçalho -->
     <div class="cabecalho">
@@ -145,12 +157,13 @@
           <small></small>
         </div>
         <div class="posicionamento">
-          <input type="submit" value="Voltar" id="esquerda">
+          
           <input type="submit" value="Avançar" id="direita">
         </div>
       </fieldset>
     
     </form>
+    <input type="submit" value="Voltar" id="esquerda" onclick="history.back()">
 
    
     
@@ -158,6 +171,11 @@
   
   
     </div>
+    <script>
+  document.getElementById("backBtn").addEventListener("click", function(){
+    history.back();
+  });
+</script>
 
 
    

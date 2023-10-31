@@ -23,6 +23,31 @@ class PedidoController extends Controller
 
     public function fazerPedido(Request $request)
     {
+        $messages = [
+            'nomeCompleto.required' => 'O :attribute é obrigatório!',
+            'endereco.required' => 'O :attribute é obrigatório!',
+            'numero.required' => 'O :attribute é obrigatório!',
+            'bairro.required' => 'O :attribute é obrigatório!',
+            'cidade.required' => 'O :attribute é obrigatório!',
+            'estado.required' => 'O :attribute é obrigatório!',
+            'bairro.required' => 'O :attribute é obrigatório!',
+            'telefone.required' => 'O :attribute é obrigatório!',
+            'email.required' => 'O :attribute é obrigatório!',
+        ];
+
+
+        $validated = $request->validate([
+            'nomeCompleto'          => 'required|min:5',
+            'endereco'    => 'required',
+            'numero'         => 'required',
+            'bairro' => 'required',
+            'cidade' => 'required',
+            'estado' => 'required',
+            'bairro' => 'required',
+            'telefone' => 'required',
+            'email' => 'required',
+        ], $messages);
+
             //dd($request->all());
             $cliente = new Cliente;
             $cliente->nomeCompleto = $request->nomeCompleto;

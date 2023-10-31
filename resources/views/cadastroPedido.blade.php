@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 @section('content')
 
     <!-- Formulário --> 
@@ -149,13 +150,21 @@
           <small></small>
         </div>
         <div class="posicionamento">
-          <input type="submit" value="Voltar" id="esquerda">
+          
           <input type="submit" value="Avançar" id="direita">
         </div>
       </fieldset>
     
     </form>
+    <input type="submit" value="Voltar" id="esquerda" onclick="history.back()">
   </div>
     </div>
+    <script>
+  document.getElementById("backBtn").addEventListener("click", function(){
+    history.back();
+  });
+</script>
+
+    
 
 @endsection

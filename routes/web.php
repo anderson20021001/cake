@@ -107,6 +107,8 @@ Route::post('/pedido/create',[PedidoController::class, 'store'])->name('pedido.i
 Route::get('/cadastroCliente',[PedidoController::class, 'cadastroCliente'])->name('cadastroCliente');
 Route::post('/fazerPedido',[PedidoController::class, 'fazerPedido'])->name('fazerPedido');
 
+Route::get('/cadastroCliente',[PedidoController::class, 'cadastroCliente'])->name('cadastroCliente');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('can:is_admin');
@@ -114,3 +116,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('email/create', [EmailController::class,'create'])->name('email.create');
 Route::post('email/create', [EmailController::class,'store'])->name('email.store');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

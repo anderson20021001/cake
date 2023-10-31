@@ -1,4 +1,4 @@
-@extends('adminlte::auth.passwords.email')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -45,4 +45,3 @@
     </div>
 </div>
 @endsection
-
