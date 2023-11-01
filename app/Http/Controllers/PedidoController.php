@@ -117,6 +117,16 @@ class PedidoController extends Controller
 
         return redirect()->route('cliente.index')->with('status', 'Produto criado com sucesso!');
     }
+
+
+    public function cadastroPedido(Request $request){
+        //dd($request->all());
+
+        $tipo = Tipo::find($request->tipo_id);
+
+        dd($tipo->valor);
+    }
+
     /**
      * Display a listing of the resource.
      */

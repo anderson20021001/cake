@@ -108,6 +108,10 @@ Route::get('/cadastroCliente',[PedidoController::class, 'cadastroCliente'])->nam
 Route::post('/fazerPedido',[PedidoController::class, 'fazerPedido'])->name('fazerPedido');
 
 Route::get('/cadastroCliente',[PedidoController::class, 'cadastroCliente'])->name('cadastroCliente');
+Route::post('/cadastroPedido',[PedidoController::class, 'cadastroPedido'])->name('cadastroPedido');
+
+
+
 
 Auth::routes();
 
@@ -121,6 +125,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
