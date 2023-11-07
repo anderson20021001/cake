@@ -14,8 +14,25 @@ class MassasSeeder extends Seeder
     public function run(): void
     {
         DB::table('massas')->insert([
-            'nome' => 'Mista',
-            'valor' => '50',
+            'nome' => 'Sabor Chocolate',
+            'valor' => '0',
+        ]);
+        DB::table('massas')->insert([
+            'nome' => 'Sabor Cenoura',
+            'valor' => '0',
+        ]);
+        DB::table('massas')->insert([
+            'nome' => 'Sabor Red Velt ',
+            'valor' => '0',
+        ]);
+        DB::table('massas')->insert([
+            'nome' => 'Sabor Baunilha',
+            'valor' => '0',
+        ]);
+        DB::table('massas')->insert([
+            'nome' => 'Sabor mista (Baunilha e Chocolate) R$ 30,00 ',
+            'valor' => '30',
         ]);
     }
-}
+    }
+

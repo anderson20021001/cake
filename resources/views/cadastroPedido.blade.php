@@ -101,12 +101,10 @@
         <!-- Endereço -->
         <div class="form-input">
           <label for="Tamanho">Tamanho</label>
-            <select id="Tamanho" name="Tamanho"> 
-          <option value=>Pequeno (15cm) - Serve até 15 fatias e custa R$ 90,00 </option> 
-          <option value=>Médio (20cm) - Serve até 28 fatias (R$130,00) </option> 
-          <option value=>Grande (25cm) - Serve até 42 fatias (R$180,00) </option> 
-          <option value=>Gigante (30 cm) - Serve até 56 fatias (R$215,00) </option> 
-          <option value=>Para tamanhos excepcionais,o cliente solicitará um orçamento </option> 
+            <select id="Tamanho" name="tamanho_id"> 
+            @foreach($tamanhos as $tamanho)
+            <option value="{{ $tamanho->id }}">{{ $tamanho->nome }}</option> 
+            @endforeach 
             </select> 
           <small></small>
         </div>
@@ -114,12 +112,10 @@
         <!-- Número -->
         <div class="form-input">
           <label> Massa</label> 
-            <select id=" Massa" name=" Massa"> 
-              <option value=>Sabor Chocolate </option> 
-              <option value=>Sabor Cenoura </option> 
-              <option value=>Sabor  Red Velvet </option> 
-              <option value=>Sabor Baunilha </option> 
-              <option value=>Sabor Mista (Com um acréscimo de R$30,00) </option> 
+            <select id=" Massa" name=" massa"> 
+            @foreach($massas as $massa)
+            <option value="{{ $massa->id }}">{{ $massa->nome }}</option> 
+            @endforeach  
            </select> 
           <small></small>
         </div>

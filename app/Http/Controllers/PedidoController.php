@@ -61,7 +61,7 @@ class PedidoController extends Controller
             $cliente->save();
 
             $tipos = Tipo::get();
-            $tamanhos = Tamanho::orderBy('nome','ASC')->get();
+            $tamanhos = Tamanho::orderBy('valor','ASC')->get();
             $massas = Massa::get();
             $recheios = Recheio::get();
             $decoracoes = Decoracao::get();
