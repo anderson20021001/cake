@@ -3,6 +3,9 @@
 @section('content')
 
   <style>
+    body{
+      background-color:#FFE4E1;
+    }
 .card {
         margin: 30px;
         width: 100%;
@@ -38,6 +41,58 @@
       background-position:absolute;
       margin-left:1800px;
     }
+    #whatsapp-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        cursor: pointer;
+      }
+
+      #whatsapp-icon img {
+        width: 100px;
+        height: 100px;
+        background-attachment: fixed;
+        background-position: absolute;
+      }
+      .container33{
+    background-color:#FFF0F5; /* Cor de fundo da div */
+    FFF0F5, FFE4E1
+    width: 100%; /* Ocupa toda a largura da página */
+    display: flex;
+    align-items: flex-start; /* Alinha os elementos no topo da div */
+  }
+
+  .image1 {
+ /* A imagem ocupa metade da largura da div */
+    max-width:50%;
+  }
+
+  .content1 {
+    flex: 1; /* Ocupa o espaço restante da div */
+    padding: 20px; /* Adiciona um espaçamento interno */
+  }
+
+  #AlterarFonteH1 {
+    color: #7c3e12;
+    font-style: italic;
+    font-weight: bolder;
+    text-align:center;
+  }
+
+  .fonte{
+    font-family: Verdana;
+    font-style: italic;
+    color:#7c3e12;
+    text-align:center;
+  }
+  .width{
+    margin: auto;
+  display: block;
+  width:1200px;
+  height:800px;
+    
+  }
       </style>
 
 
@@ -50,17 +105,17 @@
     </ol>
     <div class="carousel-inner ">
         <div class="carousel-item active">
-            <img src="{{ url('/imagens/cake1.jpg')}}" class="d-block w-100">
+            <img src="{{ url('/imagens/cake1.jpg')}}" class="width">
             <div class="carousel-caption">
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ url('/imagens/cake2.jpg')}}" class="d-block w-100" alt="Slide 2">
+            <img src="{{ url('/imagens/boloDeFrutas.jpg')}}" class="width" alt="Slide 2">
             <div class="carousel-caption">
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ url('/imagens/cake3.jpg')}}" class="d-block w-100" alt="Slide 3">
+            <img src="{{ url('/imagens/cake3.jpg')}}" class="width" alt="Slide 3">
             <div class="carousel-caption">
             </div>
         </div>
@@ -75,24 +130,25 @@
     </a>
 </div>
 
-<div class="container2">
-      
-<h1 style="color:Violet; font-style:italic; font-weight:bolder; display:inline">Nado Cake's</h1>
-      <p style="font-family:Verdana, sans-serif; font-style:italic;">
-      Reginaldo é um entusiasta da culinária desde da adolescência, e sua mãe foi sua grande inspiração.
-      Resolveu investir na ideia e se especializar em fazer bolos para festas, eventos e aprimorou-se em decoração. 
-      Criou novos sabores de recheios para atender às preferências dos seus clientes. 
-      A marca Nado Cake’s é reconhecida pela qualidade, sabor, criatividade, bolos personalizados e por fazer com que cada celebração seja única e especial. 
-      Deixo aqui meu Convite a todos vocês para degustarem verdadeiras obras de arte preparado com muito amor e carinho!!!
+<div class="container33">
+    <div class="content1">
+      <h1 id="AlterarFonteH1">Nado Cake's</h1>
+      <p class="fonte">
+        Reginaldo é um entusiasta da culinária desde a adolescência, e sua mãe foi sua grande inspiração.
+        Resolveu investir na ideia e se especializar em fazer bolos para festas, eventos e aprimorou-se em decoração.
+        Criou novos sabores de recheios para atender às preferências dos seus clientes.
+        A marca Nado Cake’s é reconhecida pela qualidade, sabor, criatividade, bolos personalizados e por fazer com que cada celebração seja única e especial.
+        Deixo aqui meu convite a todos vocês para degustarem verdadeiras obras de arte preparadas com muito amor e carinho!!!
       </p>
-          <div class="background1"></div> <!-- Elemento de fundo -->
-          <img src="{{ url('/imagens/cake2.jpg')}}" alt="Sua Imagem" class="image">
-        </div>
+    </div>
+    <img src="{{ url('/imagens/cake3.jpg')}}" alt="Sua Imagem" class="image1">
+  </div>
 
 
 
 
 <div class="container">
+  <span id="irParaCard"></span>
       <!-- Linha 1 -->
       <div class="row">
         <div class="col-md-4">
@@ -216,21 +272,18 @@
       </div>
       <!-- Fim da Linha 3 -->
     </div>
-    <span class="wptwa-handler">
-          <svg class="WhatsApp" width="50px" height="50px" viewBox="0 0 90 90"><use xlink:href="#wptwa-logo">ff</svg>
+    
 
-          <span class="text"></span>          
-      </span>
-  </div>
-    <!-- Adicione a URL do seu perfil do WhatsApp na variável 'whatsappURL' -->
+    <div id="whatsapp-icon">
+      <a href="javascript:void(0);" onclick="window.open(whatsappURL, '_blank');">
+        <img src= "{{ url('/imagens/wpp.png')}}" alt="WhatsApp" width="50px">
+      </a>
+    </div>
+
     <script>
-      var whatsappURL = "https://api.whatsapp.com/send?phone=21985423502&text= Olá, você poderia me ajudar?";
+      var whatsappURL = "https://api.whatsapp.com/send?phone=21985423502&text=Olá,%20você%20poderia%20me%20ajudar?";
     </script>
-    <a href="javascript:void(0);" onclick="window.open(whatsappURL, '_blank');">
-      <img src="{{ url('/imagens/wpp.png')}}" alt="WhatsApp" width="100" height="100" id="image3" style=" background-attachment:fixed; background-position:absolute;">
-      <br>
-      
-    </a>
+
 
 
 

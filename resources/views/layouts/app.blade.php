@@ -23,19 +23,19 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#" style="color: #ffffff;">Início</a>
+                    <a class="nav-link" href="#carouselExampleIndicators" style="color: #ffffff;">Início</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#" style="color: #ffffff;">Produto</a>
+                    <a class="nav-link" href="#irParaCard" style="color: #ffffff;">Produto</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="{{ url('/cadastroCliente') }}" style="color: #ffffff;">Fazer Pedido</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#" style="color: #ffffff;">Contato</a>
+                    <a class="nav-link" href="https://api.whatsapp.com/send?phone=21985423502&text=Olá,%20você%20poderia%20me%20ajudar?" style="color: #ffffff;">Contato</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#" style="color: #ffffff;">Quem Somos</a>
+                    <a class="nav-link" href="#AlterarFonteH1" style="color: #ffffff;">Quem Somos</a>
                 </li>
             </ul>
         </div>
