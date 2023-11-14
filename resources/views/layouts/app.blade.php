@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#carouselExampleIndicators" style="color: #ffffff;">Início</a>
+                    <a class="nav-link" href="{{ url('/') }}" style="color: #ffffff;">Início</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="#irParaCard" style="color: #ffffff;">Produto</a>

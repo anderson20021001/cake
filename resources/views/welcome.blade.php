@@ -135,10 +135,11 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+<br>
 
 <div class="container33">
     <div class="content1">
-      <h1 id="AlterarFonteH1">Nado Cake's</h1>
+      <h1 id="AlterarFonteH1">Nado Cake's</h1> <br><br>,<br>
       <p class="fonte">
         Reginaldo é um entusiasta da culinária desde a adolescência, e sua mãe foi sua grande inspiração.
         Resolveu investir na ideia e se especializar em fazer bolos para festas, eventos e aprimorou-se em decoração.
@@ -338,7 +339,7 @@
       <!-- Instagram -->
       <a class="btn text-white btn-floating m-1"
         style="background-color: #ac2bac;"
-        href="#!"
+        href="https://instagram.com/nados_cake?igshid=OGQ5ZDc2ODk2ZA=="
         role="button"
         ><i class="fab fa-instagram"></i
       ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
