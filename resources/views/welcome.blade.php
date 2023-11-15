@@ -8,12 +8,12 @@
     }
 .card {
         margin: 30px;
-        width: 100%;
+        max-width: 100%;
         height: 350px;
       }
       /* Reduz o tamanho das imagens nos cards */
       .card-img-top {
-        width: 100%;
+        max-width: 100%;
         margin: 0 auto;
       }
       /* Faz o botão ocupar a largura total */
@@ -65,7 +65,7 @@
 
   .image1 {
  /* A imagem ocupa metade da largura da div */
-    max-width:50%;
+    max-width:80%;
   }
 
   .content1 {
@@ -96,9 +96,21 @@
   .card-text{
     font-size:15px;
   }
-  .card{
+  .card-img-top{
     max-width:100%;
+    height:250px;
   }
+#expandir{
+  max-width:100%;
+}
+.card-body{
+  display:block
+}
+.card{
+  
+  display:flex;
+  width:400px;
+}
       </style>
 
 
@@ -154,132 +166,133 @@
 
 
 
-  <div class="container">
-  <span id="irParaCard"></span>
-      <!-- Linha 1 -->
-      <div class="row">
-        <div class="col-md-4">
-          <!-- Card 1 -->
-          <div class="card">
-            <img src="{{ url('/imagens/kitkat.jpg')}}" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Bolo kit ket</h5>
-              <p class="card-text">Massa baunilha, recheio brigadeiro.</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <!-- Fim do Card 1 -->
-        </div>
-        <div class="col-md-4">
-          <!-- Card 2 -->
-          <div class="card" style="width: 100%;">
-            <img src="{{ url('/imagens/frutasbolo.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bolo Simples</h5>
-              <p class="card-text">Massa banilha, cobertura Chatininho e frutas.</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <!-- Fim do Card 2 -->
-        </div>
-          <div class="col-md-4">
-          <!-- Card 2 -->
-          <div class="card" style="width: 100%;">
-            <img src="{{ url('/imagens/morangobolo.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bolo chantininho</h5>
-              <p class="card-text">Massa chocolate, recheio chocolate branco com morango</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <!-- Fim do Card 3 -->
-        </div>
+  <div class=" row-cols-1 row-cols-md-3 " style="display:flex; justify-content:Center;">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ url('/imagens/kitkat.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo kit kat</h5>
+        <p class="card-text">Massa baunilha, recheio brigadeiro.</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
       </div>
-      <!-- Fim da Linha 1 -->
-
-      <!-- Linha 2 -->
-      <div class="row">
-        <div class="col-md-4">
-          <!-- Card 4 -->
-          <div class="card" style="width: 100%;">
-            <img src="{{ url('/imagens/bolobolo.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bolo Pelado</h5>
-              <p class="card-text">Massa baunilha, recheio limão, decorado com frutas
-</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <!-- Fim do Card 4 -->
-        </div>
-        <div class="col-md-4">
-          <!-- Card 5 -->
-          <div class="card" style="width: 100%;">
-            <img src="{{ url('/imagens/boloariel.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bolo Personalizado</h5>
-              <p class="card-text">Massa baunilha, recheio laka com oreo</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <!-- Fim do Card 5 -->
-        </div>
-        <div class="col-md-4">
-          <!-- Card 6 -->
-          <div class="card" style="width: 100%;">
-            <img src="{{ url('/imagens/toystory.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bolo Personalizado</h5>
-              <p class="card-text">Massa baunilha, recheio ninho trufado</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <!-- Fim do Card 6 -->
-        </div>
+      <div class="card-footer">
+        
       </div>
-      <!-- Fim da Linha 2 -->
-
-      <!-- Linha 3 -->
-      <div class="row">
-        <div class="col-md-4">
-          <!-- Card 7 -->
-          <div class="card" style="width: 100%;">
-            <img src="{{ url('/imagens/redvel.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bolo Naked</h5>
-              <p class="card-text">Massa vermelha com recheio de limão</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <!-- Fim do Card 7 -->
-        </div>
-        <div class="col-md-4">
-          <!-- Card 8 -->
-          <div class="card" style="width: 100%;">
-            <img src="{{ url('/imagens/morango.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bolo de chocolate</h5>
-              <p class="card-text">Massa chocolate, recheio chocolate e cobertura chantininho.</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <!-- Fim do Card 8 -->
-        </div>
-        <div class="col-md-4">
-          <!-- Card 9 -->
-          <div class="card" style="width: 100%;">
-            <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"> Bolo Naked</h5>
-              <p class="card-text">Massa baunilha, recheio chocolate branco com morango</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <!-- Fim do Card 9 -->
-        </div>
-      </div>
-      <!-- Fim da Linha 3 -->
     </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ url('/imagens/frutasbolo.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo Simples</h5>
+        <p class="card-text">Massa banilha, cobertura Chatininho e frutas.</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ url('/imagens/morangobolo.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo chantininho</h5>
+        <p class="card-text">Massa chocolate, recheio chocolate branco com morango</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ url('/imagens/bolobolo.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo Pelado</h5>
+        <p class="card-text">Massa baunilha, recheio limão, decorado com frutas</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      <div class="card-footer">
+      
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ url('/imagens/boloariel.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo Personalizado</h5>
+        <p class="card-text">Massa baunilha, recheio laka com oreo</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ url('/imagens/toystory.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo Personalizado</h5>
+        <p class="card-text">Massa baunilha, recheio ninho trufado</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ url('/imagens/redvel.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo Naked</h5>
+        <p class="card-text">Massa vermelha com recheio de limão</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ url('/imagens/morango.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo de chocolate</h5>
+        <p class="card-text">Massa chocolate, recheio chocolate e cobertura chantininho.</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo Naked</h5>
+        <p class="card-text">Massa baunilha, recheio chocolate branco com morango</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
     
 
     <div id="whatsapp-icon">
