@@ -159,11 +159,13 @@
         <div class="posicionamento">
           
           <input type="submit" value="Avançar" id="direita">
+          <input type="submit" value="Voltar" id="esquerda" onclick="history.back()">
         </div>
+      
       </fieldset>
-    
+      
     </form>
-    <input type="submit" value="Voltar" id="esquerda" onclick="history.back()">
+   
 
    
     

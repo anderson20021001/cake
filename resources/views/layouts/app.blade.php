@@ -16,26 +16,26 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger-subtle" style="padding-bottom: 5px; background-color:#FFC0CB;">
     <div class="container">
-        <img src="{{ url('/imagens/logo.png')}}" title="logo da confeitaria" title="Logo da confeitaria de bolo" width="140px">
+        <img src="{{ url('/imagens/logoNados.png')}}" title="logo da confeitaria"  width="150px">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="{{ url('/') }}" style="color: #ffffff;">Início</a>
+                    <a class="nav-link" href="{{ url('/') }}" style="color:#6a201f; font-weight:bolder; font-size:19px; font-style:italic;">Início</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#irParaCard" style="color: #ffffff;">Produto</a>
+                    <a class="nav-link" href="#irParaCard" style="color:#6a201f; font-weight:bolder; font-size:19px; font-style:italic;">Produto</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="{{ url('/cadastroCliente') }}" style="color: #ffffff;">Fazer Pedido</a>
+                    <a class="nav-link" href="{{ url('/cadastroCliente') }}" style="color:#6a201f; font-weight:bolder; font-size:19px; font-style:italic;">Fazer Pedido</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="https://api.whatsapp.com/send?phone=21985423502&text=Olá,%20você%20poderia%20me%20ajudar?" style="color: #ffffff;">Contato</a>
+                    <a class="nav-link" href="https://api.whatsapp.com/send?phone=21985423502&text=Olá,%20você%20poderia%20me%20ajudar?" style="color: #6a201f; font-weight:bolder; font-size:19px;">Contato</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#AlterarFonteH1" style="color: #ffffff;">Quem Somos</a>
+                    <a class="nav-link" href="#AlterarFonteH1" style="color: #6a201f; font-weight:bolder; font-size:19px; font-style:italic;" >Quem Somos</a>
                 </li>
             </ul>
         </div>

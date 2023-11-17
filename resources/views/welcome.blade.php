@@ -105,11 +105,26 @@
 }
 .card-body{
   display:block
+  
 }
 .card{
   
   display:flex;
   width:400px;
+  height:200px;
+}
+.display{
+  justify-content:center;
+  display:flex;
+}
+h5{
+  text-align:center;
+}
+.card-footer{
+  max-width:100%;
+}
+#navbarNav{
+  color:brown;
 }
       </style>
 
@@ -165,17 +180,24 @@
 
 
 
-
+<div class="display">
   <div class=" row-cols-1 row-cols-md-3 " style="display:flex; justify-content:Center;">
   <div class="col">
     <div class="card h-100">
       <img src="{{ url('/imagens/kitkat.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo kit kat</h5>
-        <p class="card-text">Massa baunilha, recheio brigadeiro.</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <p class="card-text">Massa: baunilha <br> Recheio: brigadeiro <br> Decoração: Personalizada
+      </p>
+     
+       
       </div>
+      
       <div class="card-footer">
+        <span>
+          <a href="#" class="btn btn-primary" style="background-color:blue;">Comprar</a>
+      </span>
+      
         
       </div>
     </div>
@@ -185,10 +207,14 @@
       <img src="{{ url('/imagens/frutasbolo.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Simples</h5>
-        <p class="card-text">Massa banilha, cobertura Chatininho e frutas.</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <p class="card-text">Massa: Banilha<br> Cobertura: Chatininho e frutas.</p>
+        
       </div>
+      
       <div class="card-footer">
+      <span>
+          <a href="#" class="btn btn-primary" class=>Comprar</a>
+      </span>
         
       </div>
     </div>
@@ -198,28 +224,37 @@
       <img src="{{ url('/imagens/morangobolo.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo chantininho</h5>
-        <p class="card-text">Massa chocolate, recheio chocolate branco com morango</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <p class="card-text">Massa: Chocolate <br> Recheio: Chocolate Branco com Morango</p>
+        
       </div>
+      
       <div class="card-footer">
+      <span>
+          <a href="#" class="btn btn-primary" class=>Comprar</a>
+      </span>
         
       </div>
     </div>
   </div>
 </div>
+</div>
 
 <br>
-
+<div class="display">
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-100">
       <img src="{{ url('/imagens/bolobolo.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Pelado</h5>
-        <p class="card-text">Massa baunilha, recheio limão, decorado com frutas</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <p class="card-text">Massa: Baunilha<Br> Recheio: Limão <br> Decoração: Decorado com frutas</p>
+       
       </div>
+    
       <div class="card-footer">
+      <span>
+          <a href="#" class="btn btn-primary" class=>Comprar</a>
+      </span>
       
       </div>
     </div>
@@ -229,11 +264,14 @@
       <img src="{{ url('/imagens/boloariel.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Personalizado</h5>
-        <p class="card-text">Massa baunilha, recheio laka com oreo</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <p class="card-text">Massa: Baunilha<br> Recheio:laka com oreo</p>
+       
       </div>
+      
       <div class="card-footer">
-        
+      <span>
+          <a href="#" class="btn btn-primary" class=>Comprar</a>
+      </span>
       </div>
     </div>
   </div>
@@ -242,27 +280,36 @@
       <img src="{{ url('/imagens/toystory.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Personalizado</h5>
-        <p class="card-text">Massa baunilha, recheio ninho trufado</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <p class="card-text">Massa Baunilha<br> Recheio: Ninho trufado</p>
+       
       </div>
+     
       <div class="card-footer">
+      <span>
+          <a href="#" class="btn btn-primary" class=>Comprar</a>
+      </span>
         
       </div>
     </div>
   </div>
 </div>
+</div>
 <br>
+<div class="display">
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-100">
       <img src="{{ url('/imagens/redvel.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Naked</h5>
-        <p class="card-text">Massa vermelha com recheio de limão</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
-      </div>
-      <div class="card-footer">
+        <p class="card-text">Massa: Vermelha<br> Recheio: Limão</p>
         
+      </div>
+      
+      <div class="card-footer">
+      <span>
+          <a href="#" class="btn btn-primary" class=>Comprar</a>
+      </span>
       </div>
     </div>
   </div>
@@ -271,11 +318,14 @@
       <img src="{{ url('/imagens/morango.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo de chocolate</h5>
-        <p class="card-text">Massa chocolate, recheio chocolate e cobertura chantininho.</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <p class="card-text">Massa: Chocolate<br> Recheio: chocolate <br> Cobertura: chantininho.</p>
+       
       </div>
+     
       <div class="card-footer">
-        
+      <span>
+          <a href="#" class="btn btn-primary" class=>Comprar</a>
+      </span>
       </div>
     </div>
   </div>
@@ -284,15 +334,22 @@
       <img src="{{ url('/imagens/cake2.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Naked</h5>
-        <p class="card-text">Massa baunilha, recheio chocolate branco com morango</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
-      </div>
-      <div class="card-footer">
+        <p class="card-text">Massa: Baunilha <br> Recheio: chocolate branco com morango</p>
         
+      </div>
+      
+      <div class="card-footer">
+      <span>
+          <a href="#" class="btn btn-primary" class=>Comprar</a>
+      </span>
       </div>
     </div>
   </div>
 </div>
+</div>
+<br>
+<br>
+<br>
     
 
     <div id="whatsapp-icon">
