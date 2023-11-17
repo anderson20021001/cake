@@ -23,13 +23,13 @@
         flex-direction: column;
       }
       fieldset {
-        border: 1px solid #000; /* Adiciona uma borda ao fieldset */
+        
         border-radius: 0; /* Remove cantos arredondados (caso haja) */
         padding: 10px; /* Adiciona espaço interno para melhor aparência */
         width: 700px;
         max-width: 700px; /* Largura máxima para o fieldset */
         margin: 0 auto; /* Centraliza horizontalmente */
-        border: 1px solid #2E64FE ;
+        border: 1px solid brown;
         
       }
       legend {
@@ -37,7 +37,7 @@
         border: 1px solid black;
         border-radius:10px ;
         width: 200px;
-        background-color: #2E64FE;
+        background-color:#FFC0CB;
       }
       input, select {
         border: none; /* Remove a borda padrão */
@@ -47,7 +47,7 @@
         width: 100%;
       }
       label{
-        color: white;
+        color: #6a201f;
       }
       .borda{
         background-color:#ffffe0;
@@ -158,8 +158,9 @@
         </div>
         <div class="posicionamento">
           
-          <input type="submit" value="Avançar" id="direita">
-          <input type="submit" value="Voltar" id="esquerda" onclick="history.back()">
+         
+          <input type="submit" value="Voltar" id="esquerda" onclick="history.back()" style="color:#6a201f; background-color:#FFC0CB;">
+          <input type="submit" value="Avançar" id="direita" style="color:#6a201f; background-color:#FFC0CB;">
         </div>
       
       </fieldset>

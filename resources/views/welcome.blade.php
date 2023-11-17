@@ -195,7 +195,7 @@ h5{
       
       <div class="card-footer">
         <span>
-          <a href="#" class="btn btn-primary" style="background-color:blue;">Comprar</a>
+          <a href="#" class="btn btn-primary" style=" background-color:#FFC0CB;">Comprar</a>
       </span>
       
         
@@ -213,7 +213,7 @@ h5{
       
       <div class="card-footer">
       <span>
-          <a href="#" class="btn btn-primary" class=>Comprar</a>
+          <a href="#" class="btn btn-primary"  style="background-color:#FFC0CB;" class=>Comprar</a>
       </span>
         
       </div>
@@ -230,7 +230,7 @@ h5{
       
       <div class="card-footer">
       <span>
-          <a href="#" class="btn btn-primary" class=>Comprar</a>
+          <a href="#" class="btn btn-primary" style="background-color:#FFC0CB;" class=>Comprar</a>
       </span>
         
       </div>
@@ -253,7 +253,7 @@ h5{
     
       <div class="card-footer">
       <span>
-          <a href="#" class="btn btn-primary" class=>Comprar</a>
+          <a href="#" class="btn btn-primary" style="background-color:#FFC0CB;" class=>Comprar</a>
       </span>
       
       </div>
@@ -270,7 +270,7 @@ h5{
       
       <div class="card-footer">
       <span>
-          <a href="#" class="btn btn-primary" class=>Comprar</a>
+          <a href="#" class="btn btn-primary" style="background-color:#FFC0CB;" class=>Comprar</a>
       </span>
       </div>
     </div>
@@ -286,7 +286,7 @@ h5{
      
       <div class="card-footer">
       <span>
-          <a href="#" class="btn btn-primary" class=>Comprar</a>
+          <a href="#" class="btn btn-primary" style="background-color:#FFC0CB;" class=>Comprar</a>
       </span>
         
       </div>
@@ -308,7 +308,7 @@ h5{
       
       <div class="card-footer">
       <span>
-          <a href="#" class="btn btn-primary" class=>Comprar</a>
+          <a href="#" class="btn btn-primary" style="background-color:#FFC0CB;" class=>Comprar</a>
       </span>
       </div>
     </div>
@@ -324,7 +324,7 @@ h5{
      
       <div class="card-footer">
       <span>
-          <a href="#" class="btn btn-primary" class=>Comprar</a>
+          <a href="#" class="btn btn-primary" style="background-color:#FFC0CB;" class=>Comprar</a>
       </span>
       </div>
     </div>
@@ -340,7 +340,7 @@ h5{
       
       <div class="card-footer">
       <span>
-          <a href="#" class="btn btn-primary" class=>Comprar</a>
+          <a href="#" class="btn btn-primary" style="background-color:#FFC0CB;" class=>Comprar</a>
       </span>
       </div>
     </div>

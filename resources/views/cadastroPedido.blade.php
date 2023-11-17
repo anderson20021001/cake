@@ -30,7 +30,7 @@
         width: 700px;
         max-width: 700px; /* Largura máxima para o fieldset */
         margin: 0 auto; /* Centraliza horizontalmente */
-        border: 1px solid #2E64FE ;
+        border: 1px solid brown;
         
       }
       legend {
@@ -38,7 +38,7 @@
         border: 1px solid black;
         border-radius:10px ;
         width: 200px;
-        background-color: #2E64FE;
+        background-color:#FFC0CB;
       }
       input, select {
         border: none; /* Remove a borda padrão */
@@ -48,7 +48,7 @@
         width: 100%;
       }
       label{
-        color: white;
+        color: #6a201f;
       }
       .borda{
         background-color:#ffffe0;
@@ -124,41 +124,59 @@
         <div class="form-input">
           <label> Recheio</label> 
             <select id=" Recheio" name=" Recheio"> 
-              <option value=>Chocolate Branco </option> 
-              <option value=>Chocolate preto, Beijinho	 </option> 
-              <option value=>Doce de Leite </option> 
-              <option value=> Ninho Trufado, Laka Oreo </option> 
-              <option value=> Maracujá </option> 
-              <option value=> Frutas(Com um acréscimo de R$30,00) </option> 
-              <option value=> Limão </option> 
-              <option value=> Gotas de chocolate(Com um acréscimo de R$30,00) </option> 
+              <option value="">Chocolate Branco</option> 
+              <option value="">Chocolate preto, Beijinho</option> 
+              <option value="">Doce de Leite</option> 
+              <option value="">Ninho Trufado, Laka Oreo</option> 
+              <option value="">Maracujá</option>
+              <option value="">Frutas(Com um acréscimo de R$30,00)</option> 
+              <option value="">Limão</option> 
+              <option value="">Gotas de chocolate(Com um acréscimo de R$30,00)</option> 
            </select> 
           <small></small>
         </div>
 
         <!-- Cidade -->
         <div class="form-input">
-          <label> Decoração</label> 
-            <select id=" Decoração" name=" Decoração"> 
-              <option value=>Bolo com topo personalizado (papelaria)  </option> 
-              <option value=>Bolo decorado com frutas  </option> 
-           </select> 
+          <label>Decoração</label> 
+            <select id="decoracao" name="decoracao" onchange="mostrarCampoDescricao()">
+              <option value="">Escolha uma decoração</option> 
+              <option value="Bolo com topo personalizado (papelaria)">Bolo com topo personalizado (papelaria)</option> 
+              <option value="Bolo decorado com frutas">Bolo decorado com frutas</option> 
+           </select>
+           
+           <div id="campoDescricao" style="display: none;">
+    <label for="descricaoBolo">Descreva o bolo que você quer:</label>
+    <input type="text" id="descricaoBolo" name="descricaoBolo">
+          </div>
           <small></small>
         </div>
         <div class="posicionamento">
-          
-          <input type="submit" value="Avançar" id="direita">
+        <input type="submit" value="Voltar" id="esquerda" onclick="history.back()" style="color:#6a201f; background-color:#FFC0CB;">
+          <input type="submit" value="Avançar" id="direita" style="color:#6a201f; background-color:#FFC0CB;">
         </div>
       </fieldset>
     
     </form>
-    <input type="submit" value="Voltar" id="esquerda" onclick="history.back()">
+   
   </div>
     </div>
     <script>
   document.getElementById("backBtn").addEventListener("click", function(){
     history.back();
   });
+
+  function mostrarCampoDescricao() {
+    let decoracaoSelect = document.getElementById("decoracao");
+    let campoDescricao = document.getElementById("campoDescricao");
+
+  if (decoracaoSelect.value == "Bolo com topo personalizado (papelaria)") {
+    campoDescricao.style.display = "block";
+  } else {
+    campoDescricao.style.display = "none";
+  }
+}
+
 </script>
 
     
