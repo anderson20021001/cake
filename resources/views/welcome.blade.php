@@ -119,12 +119,22 @@
 }
 h5{
   text-align:center;
+  font-size:25px;
+  font-style:italic;
 }
 .card-footer{
   max-width:100%;
 }
 #navbarNav{
   color:brown;
+}
+.card-text{
+  text-align:center;
+  font-family:tahoma;
+  font-size:20px;
+  font-weight:bolder;
+  color:brown;
+
 }
       </style>
 

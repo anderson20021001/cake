@@ -29,6 +29,7 @@
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     text-decoration:none;
+    text-align:center;
 
 
   }

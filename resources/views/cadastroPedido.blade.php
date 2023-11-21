@@ -151,6 +151,10 @@
           </div>
           <small></small>
         </div>
+          <div>
+      <label for="diaa">Data para a entrega do bolo</label>
+      <input type="date" id="diaa" name="diaa" />
+    </div>
         <div class="posicionamento">
         <input type="submit" value="Voltar" id="esquerda" onclick="history.back()" style="color:#6a201f; background-color:#FFC0CB;">
           <input type="submit" value="Avançar" id="direita" style="color:#6a201f; background-color:#FFC0CB;">
