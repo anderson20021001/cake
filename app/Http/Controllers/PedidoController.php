@@ -10,6 +10,7 @@ use App\Models\Recheio;
 use App\Models\Decoracao;
 use App\Models\Cobertura;
 use App\Models\Cliente;
+use App\Models\Venda;
 
 
 
@@ -71,7 +72,8 @@ class PedidoController extends Controller
                                         'massas' => $massas,
                                         'recheios' => $recheios,
                                         'decoracoes' => $decoracoes,
-                                        'coberturas' => $coberturas
+                                        'coberturas' => $coberturas,
+                                        'cliente' => $cliente
                                         ]);
     
 
@@ -122,9 +124,31 @@ class PedidoController extends Controller
     public function cadastroPedido(Request $request){
         //dd($request->all());
 
-        $tipo = Tipo::find($request->tipo_id);
+        //$date = Carbon::now()->format('Y-m-d');
+ 
+        //$venda = new Venda;
+        //$venda->cliente_id = $request->cliente_id;
+        //$venda->data = $request->data;
 
-        dd($tipo->valor);
+
+        $tipo = Tipo::find($request->tipo_id);
+        $tamanho = Tamanho::find($request->tamanho_id);
+        $massa = Massa::find($request->massa_id);
+        $recheio = Recheio::find($request->recheio_id);
+        $decoracao = Decoracao::find($request->decoracao_id);
+
+        dd($tipo->valor , 
+        $tamanho->valor ,
+         $massa->valor , 
+         $recheio->valor ,
+          $decoracao->valor);
+
+        $venda = new Venda;
+        $venda->cliente_id = $request->cliente_id;
+        $venda->data = $request->data;
+        $venda->valor = $tipo->valor + $tamanho->valor + $massa->valor + $recheio->valor + $decoracao->valor;
+        $venda->save();
+        dd($venda->valor);
     }
 
     /**

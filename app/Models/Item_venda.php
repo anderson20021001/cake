@@ -26,14 +26,14 @@ class Item_venda extends Model
     }
     public function decoracao(): HasOne
     {
-        return $this->hasOne(Massa::class, 'id', 'decoracao_id');
+        return $this->hasOne(Decoracao::class, 'id', 'decoracao_id');
     }
     public function tamanho(): HasOne
     {
-        return $this->hasOne(Massa::class, 'id', 'tamanho_id');
+        return $this->hasOne(Tamanho::class, 'id', 'tamanho_id');
     }
     public function venda(): HasOne
     {
-        return $this->hasOne(Massa::class, 'id', 'cliente_id');
+        return $this->hasOne(Venda::class, 'id', 'venda_id');
     }
 }

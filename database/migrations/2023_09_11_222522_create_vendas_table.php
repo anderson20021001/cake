@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('vendas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("cliente_id");
+            $table->bigInteger("cliente_id");
             $table->date("data");
+            $table->integer("valor");
             $table->timestamps();
-
-
         });
     }
 

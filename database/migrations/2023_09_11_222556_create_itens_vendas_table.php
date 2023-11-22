@@ -19,8 +19,9 @@ return new class extends Migration
             $table->bigInteger("tamanho_id");
             $table->bigInteger("recheio_id");
             $table->bigInteger("massa_id");
-            $table->integer("quantidade");
-            $table->float("valor");
+            $table->text("descricao");
+            
+            
             $table->timestamps();
 
 

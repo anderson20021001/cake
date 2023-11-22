@@ -49,7 +49,7 @@
     <tr>
 
       <th scope="col">ID</th>
-      <th scope="col">cliente_id</th>
+      <th scope="col">cliente</th>
       <th scope="col">data</th>
       <th scope="col">Ações</th>
     </tr>
@@ -58,7 +58,7 @@
 @foreach ($venda as $venda)
   <tr>
    <td>{{$venda->id}}</td>
-    <td>{{$venda->cliente_id}}</td>
+    <td>{{$venda->cliente->nomeCompleto}}</td>
     <td>{{$venda->data}}</td>
    
 

@@ -34,9 +34,11 @@
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     text-decoration:none;
+    text-align:center;
 
 
   }
+
 
 
 </style>
@@ -63,12 +65,13 @@
 
     <td>
       <div id="estilo">
-      <a href= "{{ url('/decoracao/' . $decoracao->id) }}">VISUALIZAR</a>
-      <a href= "{{ url('/decoracao/' . $decoracao->id . '/edit') }}">EDITAR</a>
+      <a href= "{{ url('/decoracao/' . $decoracao->id) }}" class="btn btn-primary">VISUALIZAR</a>
+      <a href= "{{ url('/decoracao/' . $decoracao->id . '/edit') }}" class="btn btn-warning" >EDITAR</a>
       <form method="POST" action="{{ url('/decoracao/' . $decoracao->id) }}" onsubmit = "return ConfirmDelete()" >
         @method('DELETE')
         @csrf
-      <input type="submit" value="EXCLUIR">
+        <a href= "{{ url('/decoracao/' . $decoracao->id . '/edit') }}" class="btn btn-danger" >Excluir</a>
+      
 </div>
 </form>
     </td>
