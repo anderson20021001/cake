@@ -16,11 +16,11 @@
       {{ session('status') }}
 </div>
 @endif
-    <script>
-    function confirmDelete() {
+<script>
+  function ConfirmDelete() {
     return confirm('Tem certeza que deseja excluir este registro?');
-    }
-  </script>
+  }
+</script>
 
 
 
@@ -66,12 +66,14 @@
       <div id="estilo">
       <a href= "{{ url('/venda/' . $venda->id) }}" class="btn btn-primary">VISUALIZAR</a>
       <a href= "{{ url('/venda/' . $venda->id . '/edit') }}" class="btn btn-warning">EDITAR</a>
-      <form method="POST" action="{{ url('/venda/' . $venda->id) }}" onsubmit = "return ConfirmDelete()" >
+      <form method="POST" action="{{ url('/venda/' . $venda->id) }}" onsubmit="return ConfirmDelete()">
         @method('DELETE')
         @csrf
-        <a href= "{{ url('/venda/' . $venda->id . '/edit') }}" class="btn btn-danger" >Excluir</a>
+        <input class="btn btn-danger" type="submit" value="EXCLUIR">
+        <!--<a href= "{{ url('/venda/' . $venda->id) }}" class="btn btn-danger" >Excluir</a>-->
+        </form>
 </div>
-</form>
+
     </td>
   </tr>
   @endforeach

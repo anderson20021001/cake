@@ -20,6 +20,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->string('perfil');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

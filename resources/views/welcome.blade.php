@@ -58,7 +58,7 @@
       .container33{
     background-color:#FFF0F5; /* Cor de fundo da div */
     FFF0F5, FFE4E1
-    width: 100%; /* Ocupa toda a largura da página */
+    max-width: 100%; /* Ocupa toda a largura da página */
     display: flex;
     align-items: flex-start; /* Alinha os elementos no topo da div */
   }
@@ -66,6 +66,7 @@
   .image1 {
  /* A imagem ocupa metade da largura da div */
     max-width:80%;
+    height:600px;
   }
 
   .content1 {
@@ -85,12 +86,14 @@
     font-style: italic;
     color:#7c3e12;
     text-align:center;
+    max-width:100%;
+    margin-bottom:60px;
   }
   .width{
     margin: auto;
   display: block;
-  width:1200px;
-  height:800px;
+  max-width:100%;
+  height:900px;
     
   }
   .card-text{
@@ -116,6 +119,7 @@
 .display{
   justify-content:center;
   display:flex;
+  max-width:100%;
 }
 h5{
   text-align:center;
@@ -145,6 +149,7 @@ h5{
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner ">
         <div class="carousel-item active">
@@ -159,6 +164,11 @@ h5{
         </div>
         <div class="carousel-item">
             <img src="{{ url('/imagens/cake3.jpg')}}" class="width" alt="Slide 3">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url('/imagens/boloBrigadeiro.jpg')}}" class="width" alt="Slide 4">
             <div class="carousel-caption">
             </div>
         </div>
@@ -191,7 +201,7 @@ h5{
 
 
 <div class="display">
-  <div class=" row-cols-1 row-cols-md-3 " style="display:flex; justify-content:Center;">
+  <div class=" row-cols-1 row-cols-md-3 " class="card-img-top" style="display:flex; justify-content:Center;">
   <div class="col">
     <div class="card h-100">
       <img src="{{ url('/imagens/kitkat.jpg')}}" class="card-img-top" alt="...">

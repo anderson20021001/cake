@@ -21,9 +21,8 @@ return new class extends Migration
             $table->bigInteger("massa_id");
             $table->bigInteger("tipo_id");
             $table->text("descricao")->nullable();
-            
-            
             $table->timestamps();
+            $table->softDeletes();
 
 
         });
