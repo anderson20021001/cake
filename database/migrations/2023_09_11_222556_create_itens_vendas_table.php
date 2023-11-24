@@ -19,7 +19,8 @@ return new class extends Migration
             $table->bigInteger("tamanho_id");
             $table->bigInteger("recheio_id");
             $table->bigInteger("massa_id");
-            $table->text("descricao");
+            $table->bigInteger("tipo_id");
+            $table->text("descricao")->nullable();
             
             
             $table->timestamps();

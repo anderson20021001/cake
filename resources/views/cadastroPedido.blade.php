@@ -113,7 +113,7 @@
         <!-- Número -->
         <div class="form-input">
           <label> Massa</label> 
-            <select id=" Massa" name=" massa"> 
+            <select id=" Massa" name=" massa_id"> 
             @foreach($massas as $massa)
             <option value="{{ $massa->id }}">{{ $massa->nome }}</option> 
             @endforeach  
@@ -128,6 +128,17 @@
             
             @foreach($recheios as $recheio)
             <option value="{{ $recheio->id }}">{{ $recheio->nome }}</option> 
+            @endforeach  
+           </select> 
+          <small></small>
+        </div>
+
+        <div class="form-input">
+          <label>Cobertura</label> 
+            <select id="cobertura_id" name="cobertura_id"> 
+            
+            @foreach($coberturas as $cobertura)
+            <option value="{{ $cobertura->id }}">{{ $cobertura->nome }}</option> 
             @endforeach  
            </select> 
           <small></small>
@@ -154,7 +165,7 @@
       <input type="date" id="data" name="data">
     </div>
         <div class="posicionamento">
-        <input type="submit" value="Voltar" id="esquerda" onclick="history.back()" style="color:#6a201f; background-color:#FFC0CB;">
+        <input type="submit" value="Voltar" id="esquerda" onclick="history.back()" style="color:#6a201f; background-color:#FFC0CB;" >
           <input type="submit" value="Avançar" id="direita" style="color:#6a201f; background-color:#FFC0CB;">
         </div>
       </fieldset>
@@ -177,7 +188,7 @@
   } else {
     descricao.style.display = "none";
   }
-}
+  }
 
 </script>
 

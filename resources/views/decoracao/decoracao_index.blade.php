@@ -30,9 +30,9 @@
     display:inline-block;
   }
   table, th, td{
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
+    border-right: 2px solid #6a201f;
+    border-left: 2px solid #6a201f;
+    border-bottom: 2px solid #6a201f;
     text-decoration:none;
     text-align:center;
 

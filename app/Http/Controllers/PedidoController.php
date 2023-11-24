@@ -11,6 +11,7 @@ use App\Models\Decoracao;
 use App\Models\Cobertura;
 use App\Models\Cliente;
 use App\Models\Venda;
+use App\Models\Item_venda;
 
 
 
@@ -137,18 +138,31 @@ class PedidoController extends Controller
         $recheio = Recheio::find($request->recheio_id);
         $decoracao = Decoracao::find($request->decoracao_id);
 
-        dd($tipo->valor , 
+        //dd($massa);
+
+        /*dd($tipo->valor , 
         $tamanho->valor ,
          $massa->valor , 
          $recheio->valor ,
-          $decoracao->valor);
+          $decoracao->valor);*/
 
         $venda = new Venda;
         $venda->cliente_id = $request->cliente_id;
         $venda->data = $request->data;
         $venda->valor = $tipo->valor + $tamanho->valor + $massa->valor + $recheio->valor + $decoracao->valor;
         $venda->save();
-        dd($venda->valor);
+
+        $item_venda = new Item_venda;
+        $item_venda->venda_id = $venda->id;
+        $item_venda->cobertura_id = $request->cobertura_id;
+        $item_venda->decoracao_id = $request->decoracao_id;
+        $item_venda->tamanho_id = $request->tamanho_id;
+        $item_venda->recheio_id = $request->recheio_id;
+        $item_venda->massa_id = $request->massa_id;
+        $item_venda->tipo_id = $request->tipo_id;
+        $item_venda->descricao = $request->descricao;
+        $item_venda->save();
+        //dd($venda->valor);
     }
 
     /**

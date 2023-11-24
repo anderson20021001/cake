@@ -24,7 +24,7 @@
 
 <a href="{{url('/cliente/create')}}">Criar</a>
 
-  <!--<style>
+  <style>
     form {
       display:inline-block;
     }
@@ -39,7 +39,7 @@
 
 
   </style>
-  -->
+
   <body>
   
     
@@ -66,12 +66,12 @@
       <td>
 
         
-        <a href= "{{ url('/cliente/' . $cliente->id) }}">VISUALIZAR</a>
-        <a href= "{{ url('/cliente/' . $cliente->id . '/edit') }}">EDITAR</a>
+        <a href= "{{ url('/cliente/' . $cliente->id) }}" class="btn btn-primary" >VISUALIZAR</a>
+        <a href= "{{ url('/cliente/' . $cliente->id . '/edit') }}" class="btn btn-warning">EDITAR</a>
         <form method="POST" action="{{ url('/cliente/' . $cliente->id) }}" onsubmit = "return ConfirmDelete()" >
           @method('DELETE')
           @csrf
-        <input type="submit" value="EXCLUIR">
+          <a href= "{{ url('/cliente/' . $cliente->id . '/edit') }}" class="btn btn-danger" >Excluir</a>
         </form>
   
   

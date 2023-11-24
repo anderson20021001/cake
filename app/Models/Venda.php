@@ -16,6 +16,7 @@ class Venda extends Model
     {
         return $this->hasOne(Cliente::class, 'id', 'cliente_id');
     }
+
     public function item_venda(): HasOne
     {
         return $this->hasOne(Item_venda::class, 'venda_id', 'id');

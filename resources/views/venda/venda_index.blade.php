@@ -64,12 +64,12 @@
 
     <td>
       <div id="estilo">
-      <a href= "{{ url('/venda/' . $venda->id) }}">VISUALIZAR</a>
-      <a href= "{{ url('/venda/' . $venda->id . '/edit') }}">EDITAR</a>
+      <a href= "{{ url('/venda/' . $venda->id) }}" class="btn btn-primary">VISUALIZAR</a>
+      <a href= "{{ url('/venda/' . $venda->id . '/edit') }}" class="btn btn-warning">EDITAR</a>
       <form method="POST" action="{{ url('/venda/' . $venda->id) }}" onsubmit = "return ConfirmDelete()" >
         @method('DELETE')
         @csrf
-      <input type="submit" value="EXCLUIR">
+        <a href= "{{ url('/venda/' . $venda->id . '/edit') }}" class="btn btn-danger" >Excluir</a>
 </div>
 </form>
     </td>

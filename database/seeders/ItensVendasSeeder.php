@@ -20,6 +20,7 @@ class ItensVendasSeeder extends Seeder
             'venda_id' => 1,
             'tamanho_id' => 1,
             'cobertura_id' => 1,
+            'tipo_id' => 1,
             'descricao' => 'toy story' 
         
         ]);

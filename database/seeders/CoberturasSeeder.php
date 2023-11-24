@@ -14,7 +14,7 @@ class CoberturasSeeder extends Seeder
     public function run(): void
     {
         DB::table('coberturas')->insert([
-            'nome' => 'chocolate',
+            'nome' => 'Chantininho',
             'valor' => '50',
         ]);
     }

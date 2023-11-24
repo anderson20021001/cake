@@ -319,12 +319,7 @@ return [
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],
-        [
-            'text' => 'Pedidos',
-            'url'  => 'pedido',
-            'icon' => 'fas fa-fw fa-user',
-            'can'  => 'is_admin',
-        ],
+        
         [
             'text' => 'Clientes',
             'url'  => 'cliente',
@@ -361,12 +356,7 @@ return [
             'icon' => 'fas fa-fw fa-user',
             'can'  => 'is_admin',
         ],
-        [
-            'text' => 'Itens',
-            'url'  => 'item',
-            'icon' => 'fas fa-fw fa-user',
-            'can'  => 'is_admin',
-        ],
+
         [
             'text' => 'Dashboard',
             'url'  => 'Dashboard',
