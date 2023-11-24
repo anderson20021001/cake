@@ -178,9 +178,7 @@ h5{
     <img src="{{ url('/imagens/cake3.jpg')}}" alt="Sua Imagem" class="image1">
   </div>
 
-
-
-<div class="display">
+  <div class="display">
   <div class=" row-cols-1 row-cols-md-3 " style="display:flex; justify-content:Center;">
   <div class="col">
     <div class="card h-100">
@@ -190,15 +188,12 @@ h5{
         <p class="card-text">Massa: baunilha <br> Recheio: brigadeiro <br> Decoração: Personalizada
       </p>
      
-       
-      </div>
+    </div>
       
       <div class="card-footer">
         <span>
           <a href="#" class="btn btn-primary" style=" background-color:#FFC0CB;">Comprar</a>
       </span>
-      
-        
       </div>
     </div>
   </div>
