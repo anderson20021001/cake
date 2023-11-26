@@ -383,7 +383,6 @@ Resolveu investir na ideia e se especializar em fazer bolos para festas, eventos
 <br>
     
 
-<<<<<<< Updated upstream
     <div id="whatsapp-icon">
       <a href="javascript:void(0);" onclick="window.open(whatsappURL, '_blank');">
         <img src= "{{ url('/imagens/wpp.png')}}" alt="WhatsApp" width="50px">
@@ -492,37 +491,6 @@ Resolveu investir na ideia e se especializar em fazer bolos para festas, eventos
     </body>
 </html>
     
-=======
-<footer class="bg-dark text-light">
-        <div class="container-fluid py-2">
-            <div class="row">
-                <div class="col-4">
-                    <ul class="nav flex-column">
-                        <li class="nav-link"><a href="#">Retornar à Loja</a></li>
-                        <li class="nav-link"><a href="#">Sobre</a></li>
-                        <li class="nav-link"><a href="#">Contato</a></li>
-                        <li class="nav-link"><a href="#">Suporte</a></li>
-                    </ul>
-                </div>
-                <div class="col-8">
-                    <p>
-                    Quando você sente aquele cheirinho de bolo caseiro e sente saudades do bolo da sua mãe ou avó, logo vem na cabeça "ai que vontade de comer bolo!" Então passa aqui!
-                  </p>
-                    <ul class="nav">
-                        <li class="nav-link"><i class="fab fa-facebook fa-3x"></i></li>
-                        <li class="nav-link"><i class="fab fa-instagram fa-3x"></i></li>
-                        <li class="nav-link"><i class="fab fa-twitter fa-3x"></i></li>
-                        <li class="nav-link"><i class="fab fa-whatsapp fa-3x"></i></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="text-center" style="background-color:rgb(227, 38, 54); padding: 20px;">
-            &copy 2018 Copyright: <a href="#">Lojas Virtuais</a>
-        </div>
-        
-    </footer>
->>>>>>> Stashed changes
 
     <!-- <div class="wpp-btn">
             <a href="https://web.whatsapp.com/send?phone=5521985423502&text= Olá, como podemos ajudar?" target="_blank">
