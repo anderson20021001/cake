@@ -197,8 +197,6 @@ h5{
     <img src="{{ url('/imagens/cake3.jpg')}}" alt="Sua Imagem" class="image1">
   </div>
 
-
-
 <div class="display">
   <div class=" row-cols-1 row-cols-md-3 " class="card-img-top" style="display:flex; justify-content:Center;">
   <div class="col">
