@@ -27,7 +27,6 @@
     display: inline-flex;
     align-items: center;
   }
-<<<<<<< Updated upstream
 
     .background1 {
       flex-grow: 1; /* Ocupa todo o espaço disponível na div */
@@ -143,17 +142,6 @@ h5{
 }
       </style>
 
-
-=======
-</style>
-
-<h1 style="color:Violet;">Nado Cake's</h1>
-
-<p>
-Reginaldo é um entusiasta da culinária desde da adolescência, e sua mãe foi sua grande inspiração.
-Resolveu investir na ideia e se especializar em fazer bolos para festas, eventos e aprimorou-se em decoração. Criou novos sabores de recheios para atender às preferências dos seus clientes. A marca Nado Cake’s é reconhecida pela qualidade, sabor, criatividade, bolos personalizados e por fazer com que cada celebração seja única e especial. Deixo aqui meu Convite a todos vocês para degustarem verdadeiras obras de arte preparado com muito amor e carinho!!!
-</p>
->>>>>>> Stashed changes
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -292,7 +280,7 @@ Resolveu investir na ideia e se especializar em fazer bolos para festas, eventos
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="{{ url('/imagens/boloariel.jpg')}}" class="card-img-top" alt="...">
+      <img src="{{ url('/imagens/boloArcoiris.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Personalizado</h5>
         <p class="card-text">Massa: Baunilha<br> Recheio:laka com oreo</p>
@@ -308,7 +296,7 @@ Resolveu investir na ideia e se especializar em fazer bolos para festas, eventos
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="{{ url('/imagens/toystory.jpg')}}" class="card-img-top" alt="...">
+      <img src="{{ url('/imagens/boloHomemAranha.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Personalizado</h5>
         <p class="card-text">Massa Baunilha<br> Recheio: Ninho trufado</p>
