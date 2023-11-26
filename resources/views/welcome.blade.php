@@ -66,7 +66,7 @@
   .image1 {
  /* A imagem ocupa metade da largura da div */
     max-width:80%;
-    height:600px;
+    height:400px;
   }
 
   .content1 {
@@ -209,15 +209,13 @@ h5{
         <p class="card-text">Massa: baunilha <br> Recheio: brigadeiro <br> Decoração: Personalizada
       </p>
      
-       
-      </div>
+       </div>
       
       <div class="card-footer">
         <span>
           <a href="#" class="btn btn-primary" style=" background-color:#FFC0CB;">Comprar</a>
       </span>
       
-        
       </div>
     </div>
   </div>
