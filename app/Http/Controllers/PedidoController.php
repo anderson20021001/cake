@@ -10,6 +10,8 @@ use App\Models\Recheio;
 use App\Models\Decoracao;
 use App\Models\Cobertura;
 use App\Models\Cliente;
+use App\Models\Venda;
+use App\Models\Item_venda;
 
 
 
@@ -71,7 +73,8 @@ class PedidoController extends Controller
                                         'massas' => $massas,
                                         'recheios' => $recheios,
                                         'decoracoes' => $decoracoes,
-                                        'coberturas' => $coberturas
+                                        'coberturas' => $coberturas,
+                                        'cliente' => $cliente
                                         ]);
     
 
@@ -122,9 +125,44 @@ class PedidoController extends Controller
     public function cadastroPedido(Request $request){
         //dd($request->all());
 
-        $tipo = Tipo::find($request->tipo_id);
+        //$date = Carbon::now()->format('Y-m-d');
+ 
+        //$venda = new Venda;
+        //$venda->cliente_id = $request->cliente_id;
+        //$venda->data = $request->data;
 
-        dd($tipo->valor);
+
+        $tipo = Tipo::find($request->tipo_id);
+        $tamanho = Tamanho::find($request->tamanho_id);
+        $massa = Massa::find($request->massa_id);
+        $recheio = Recheio::find($request->recheio_id);
+        $decoracao = Decoracao::find($request->decoracao_id);
+
+        //dd($massa);
+
+        /*dd($tipo->valor , 
+        $tamanho->valor ,
+         $massa->valor , 
+         $recheio->valor ,
+          $decoracao->valor);*/
+
+        $venda = new Venda;
+        $venda->cliente_id = $request->cliente_id;
+        $venda->data = $request->data;
+        $venda->valor = $tipo->valor + $tamanho->valor + $massa->valor + $recheio->valor + $decoracao->valor;
+        $venda->save();
+
+        $item_venda = new Item_venda;
+        $item_venda->venda_id = $venda->id;
+        $item_venda->cobertura_id = $request->cobertura_id;
+        $item_venda->decoracao_id = $request->decoracao_id;
+        $item_venda->tamanho_id = $request->tamanho_id;
+        $item_venda->recheio_id = $request->recheio_id;
+        $item_venda->massa_id = $request->massa_id;
+        $item_venda->tipo_id = $request->tipo_id;
+        $item_venda->descricao = $request->descricao;
+        $item_venda->save();
+        //dd($venda->valor);
     }
 
     /**

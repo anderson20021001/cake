@@ -4,7 +4,7 @@
 
   <style>
     body{
-      background-color:#FFE4E1;
+      background-color:#FFCFD9;
     }
 .card {
         margin: 30px;
@@ -58,7 +58,7 @@
       .container33{
     background-color:#FFF0F5; /* Cor de fundo da div */
     FFF0F5, FFE4E1
-    width: 100%; /* Ocupa toda a largura da página */
+    max-width: 100%; /* Ocupa toda a largura da página */
     display: flex;
     align-items: flex-start; /* Alinha os elementos no topo da div */
   }
@@ -66,6 +66,7 @@
   .image1 {
  /* A imagem ocupa metade da largura da div */
     max-width:80%;
+    height:600px;
   }
 
   .content1 {
@@ -85,12 +86,14 @@
     font-style: italic;
     color:#7c3e12;
     text-align:center;
+    max-width:100%;
+    margin-bottom:60px;
   }
   .width{
     margin: auto;
   display: block;
-  width:1200px;
-  height:800px;
+  max-width:100%;
+  height:900px;
     
   }
   .card-text{
@@ -116,15 +119,26 @@
 .display{
   justify-content:center;
   display:flex;
+  max-width:100%;
 }
 h5{
   text-align:center;
+  font-size:25px;
+  font-style:italic;
 }
 .card-footer{
   max-width:100%;
 }
 #navbarNav{
   color:brown;
+}
+.card-text{
+  text-align:center;
+  font-family:tahoma;
+  font-size:20px;
+  font-weight:bolder;
+  color:brown;
+
 }
       </style>
 
@@ -135,20 +149,26 @@ h5{
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner ">
         <div class="carousel-item active">
-            <img src="{{ url('/imagens/cake1.jpg')}}" class="width">
+            <img src="{{ url('/imagens/bolomorango.jpeg')}}" class="width">
             <div class="carousel-caption">
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ url('/imagens/boloDeFrutas.jpg')}}" class="width" alt="Slide 2">
+            <img src="{{ url('/imagens/bolobolo.jpg')}}" class="width" alt="Slide 2">
             <div class="carousel-caption">
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ url('/imagens/cake3.jpg')}}" class="width" alt="Slide 3">
+            <img src="{{ url('/imagens/bolochocolatemorango.jpg')}}" class="width" alt="Slide 3">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url('/imagens/boloBrigadeiro.jpg')}}" class="width" alt="Slide 4">
             <div class="carousel-caption">
             </div>
         </div>
@@ -175,7 +195,7 @@ h5{
         Deixo aqui meu convite a todos vocês para degustarem verdadeiras obras de arte preparadas com muito amor e carinho!!!
       </p>
     </div>
-    <img src="{{ url('/imagens/cake3.jpg')}}" alt="Sua Imagem" class="image1">
+    <img src="{{ url('/imagens/reginaldo.jpg')}}" alt="Sua Imagem" class="image1">
   </div>
 
   <div class="display">
@@ -256,7 +276,7 @@ h5{
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="{{ url('/imagens/boloariel.jpg')}}" class="card-img-top" alt="...">
+      <img src="{{ url('/imagens/bolounicornio.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Personalizado</h5>
         <p class="card-text">Massa: Baunilha<br> Recheio:laka com oreo</p>
@@ -272,7 +292,7 @@ h5{
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="{{ url('/imagens/toystory.jpg')}}" class="card-img-top" alt="...">
+      <img src="{{ url('/imagens/bolotoystory.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Personalizado</h5>
         <p class="card-text">Massa Baunilha<br> Recheio: Ninho trufado</p>

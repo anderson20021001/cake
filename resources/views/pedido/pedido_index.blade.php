@@ -5,6 +5,20 @@
 @extends('adminlte::page')
 
 @section('content')
+<style>
+form {
+    display:inline-block;
+  }
+  table, th, td{
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    text-decoration:none;
+    text-align:center;
+
+
+  }
+  </style>
 
 <div class="container">
 

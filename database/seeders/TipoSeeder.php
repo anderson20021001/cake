@@ -15,17 +15,17 @@ class TipoSeeder extends Seeder
     {
         DB::table('tipos')->insert([
             'nome' => 'Bolo simples',
-            'valor' => '50',
+            'valor' => '0',
         ]);
 
         DB::table('tipos')->insert([
             'nome' => 'Bolo pelado (Naked)',
-            'valor' => '50',
+            'valor' => '0',
         ]);
 
         DB::table('tipos')->insert([
             'nome' => 'Bolo com cobertura (Chantininho)',
-            'valor' => '50',
+            'valor' => '0',
         ]);
     }
 }

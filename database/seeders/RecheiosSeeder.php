@@ -15,7 +15,47 @@ class RecheiosSeeder extends Seeder
     {
         DB::table('recheios')->insert([
             'nome' => 'brigadeiro',
-            'valor' => '50',
+            'valor' => '0',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'Chocolate',
+            'valor' => '0',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'Ninho Trufado',
+            'valor' => '0',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'brigadeiro',
+            'valor' => '0',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'Beijinho',
+            'valor' => '0',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'Laka com óreo',
+            'valor' => '0',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'Laka com óreo',
+            'valor' => '0',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'Frutas R$25,00',
+            'valor' => '25',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'Ninho Trufado',
+            'valor' => '0',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'Doce de Leite',
+            'valor' => '0',
+        ]);
+        DB::table('recheios')->insert([
+            'nome' => 'Limão',
+            'valor' => '0',
         ]);
     }
 }

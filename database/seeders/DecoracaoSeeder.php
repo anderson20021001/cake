@@ -14,8 +14,13 @@ class DecoracaoSeeder extends Seeder
     public function run(): void
     {
         DB::table('decoracoes')->insert([
-            'nome' => 'flamengo',
-            'valor' => '60',  
+            'nome' => 'personalizado',
+            'valor' => 0,  
+        ]);
+
+        DB::table('decoracoes')->insert([
+            'nome' => 'Frutas',
+            'valor' => 0,  
         ]);
     }
 }

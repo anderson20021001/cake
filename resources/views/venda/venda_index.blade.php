@@ -16,11 +16,11 @@
       {{ session('status') }}
 </div>
 @endif
-    <script>
-    function confirmDelete() {
+<script>
+  function ConfirmDelete() {
     return confirm('Tem certeza que deseja excluir este registro?');
-    }
-  </script>
+  }
+</script>
 
 
 
@@ -34,6 +34,7 @@
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     text-decoration:none;
+    text-align:center;
 
 
   }
@@ -48,7 +49,7 @@
     <tr>
 
       <th scope="col">ID</th>
-      <th scope="col">cliente_id</th>
+      <th scope="col">cliente</th>
       <th scope="col">data</th>
       <th scope="col">Ações</th>
     </tr>
@@ -57,20 +58,22 @@
 @foreach ($venda as $venda)
   <tr>
    <td>{{$venda->id}}</td>
-    <td>{{$venda->cliente_id}}</td>
+    <td>{{$venda->cliente->nomeCompleto}}</td>
     <td>{{$venda->data}}</td>
    
 
     <td>
       <div id="estilo">
-      <a href= "{{ url('/venda/' . $venda->id) }}">VISUALIZAR</a>
-      <a href= "{{ url('/venda/' . $venda->id . '/edit') }}">EDITAR</a>
-      <form method="POST" action="{{ url('/venda/' . $venda->id) }}" onsubmit = "return ConfirmDelete()" >
+      <a href= "{{ url('/venda/' . $venda->id) }}" class="btn btn-primary">VISUALIZAR</a>
+      <a href= "{{ url('/venda/' . $venda->id . '/edit') }}" class="btn btn-warning">EDITAR</a>
+      <form method="POST" action="{{ url('/venda/' . $venda->id) }}" onsubmit="return ConfirmDelete()">
         @method('DELETE')
         @csrf
-      <input type="submit" value="EXCLUIR">
+        <input class="btn btn-danger" type="submit" value="EXCLUIR">
+        <!--<a href= "{{ url('/venda/' . $venda->id) }}" class="btn btn-danger" >Excluir</a>-->
+        </form>
 </div>
-</form>
+
     </td>
   </tr>
   @endforeach

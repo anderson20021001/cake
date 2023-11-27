@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Venda;
 use Illuminate\Http\Request;
+use App\Models\Item_venda;
 
 class VendaController extends Controller
 {
@@ -90,8 +91,13 @@ class VendaController extends Controller
      */
     public function destroy(string $id)
     {
+        $item_venda = Item_venda::where('venda_id',$id)->first();
+        //dd($item_venda);
+        $item_venda->delete();
+
         $venda = Venda::find($id);
         $venda->delete();
+
         return redirect('/venda')->with('status','Venda excluída com sucesso!');
     }
 }

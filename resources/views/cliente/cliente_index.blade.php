@@ -24,7 +24,7 @@
 
 <a href="{{url('/cliente/create')}}">Criar</a>
 
-  <!--<style>
+  <style>
     form {
       display:inline-block;
     }
@@ -39,7 +39,7 @@
 
 
   </style>
-  -->
+
   <body>
   
     
@@ -58,20 +58,20 @@
   @foreach ($clientes as $cliente)
     <tr>
     <td>{{$cliente->id}}</td>
-      <td>{{$cliente->nome}}</td>
+      <td>{{$cliente->nomeCompleto}}</td>
       <td>{{$cliente->email}}</td>
-      <td>{{$cliente->celular}}</td>
+      <td>{{$cliente->telefone}}</td>
       <td>{{$cliente->endereco}}</td>
 
       <td>
 
         
-        <a href= "{{ url('/cliente/' . $cliente->id) }}">VISUALIZAR</a>
-        <a href= "{{ url('/cliente/' . $cliente->id . '/edit') }}">EDITAR</a>
+        <a href= "{{ url('/cliente/' . $cliente->id) }}" class="btn btn-primary" >VISUALIZAR</a>
+        <a href= "{{ url('/cliente/' . $cliente->id . '/edit') }}" class="btn btn-warning">EDITAR</a>
         <form method="POST" action="{{ url('/cliente/' . $cliente->id) }}" onsubmit = "return ConfirmDelete()" >
           @method('DELETE')
           @csrf
-        <input type="submit" value="EXCLUIR">
+          <a href= "{{ url('/cliente/' . $cliente->id . '/edit') }}" class="btn btn-danger" >Excluir</a>
         </form>
   
   

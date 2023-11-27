@@ -87,6 +87,7 @@
     @csrf
       <fieldset>
         <legend>Vamos construir o seu bolo</legend>
+        <input type="hidden" name="cliente_id" value="{{$cliente->id}}">
 
         <!-- Nome completo -->
         <div class="form-input">
@@ -112,7 +113,7 @@
         <!-- Número -->
         <div class="form-input">
           <label> Massa</label> 
-            <select id=" Massa" name=" massa"> 
+            <select id=" Massa" name=" massa_id"> 
             @foreach($massas as $massa)
             <option value="{{ $massa->id }}">{{ $massa->nome }}</option> 
             @endforeach  
@@ -123,15 +124,22 @@
         <!-- Bairro -->
         <div class="form-input">
           <label> Recheio</label> 
-            <select id=" Recheio" name=" Recheio"> 
-              <option value="">Chocolate Branco</option> 
-              <option value="">Chocolate preto, Beijinho</option> 
-              <option value="">Doce de Leite</option> 
-              <option value="">Ninho Trufado, Laka Oreo</option> 
-              <option value="">Maracujá</option>
-              <option value="">Frutas(Com um acréscimo de R$30,00)</option> 
-              <option value="">Limão</option> 
-              <option value="">Gotas de chocolate(Com um acréscimo de R$30,00)</option> 
+            <select id="recheio_id" name="recheio_id"> 
+            
+            @foreach($recheios as $recheio)
+            <option value="{{ $recheio->id }}">{{ $recheio->nome }}</option> 
+            @endforeach  
+           </select> 
+          <small></small>
+        </div>
+
+        <div class="form-input">
+          <label>Cobertura</label> 
+            <select id="cobertura_id" name="cobertura_id"> 
+            
+            @foreach($coberturas as $cobertura)
+            <option value="{{ $cobertura->id }}">{{ $cobertura->nome }}</option> 
+            @endforeach  
            </select> 
           <small></small>
         </div>
@@ -139,20 +147,25 @@
         <!-- Cidade -->
         <div class="form-input">
           <label>Decoração</label> 
-            <select id="decoracao" name="decoracao" onchange="mostrarCampoDescricao()">
-              <option value="">Escolha uma decoração</option> 
-              <option value="Bolo com topo personalizado (papelaria)">Bolo com topo personalizado (papelaria)</option> 
-              <option value="Bolo decorado com frutas">Bolo decorado com frutas</option> 
+            <select id="decoracao" name="decoracao_id" onchange="mostrarCampoDescricao()">
+            <option value="">Selecione uma opção</option>
+            @foreach($decoracoes as $decoracao)
+            <option value="{{ $decoracao->id }}">{{ $decoracao->nome }}</option> 
+            @endforeach  
            </select>
            
-           <div id="campoDescricao" style="display: none;">
-    <label for="descricaoBolo">Descreva o bolo que você quer:</label>
-    <input type="text" id="descricaoBolo" name="descricaoBolo">
+           <div id="descricao" style="display: none;">
+    <label for="descricao">Descreva o bolo que você quer:</label>
+    <input type="text" id="descricao" name="descricao">
           </div>
           <small></small>
         </div>
+          <div>
+      <label for="data">Data para a entrega do bolo</label>
+      <input type="date" id="data" name="data">
+    </div>
         <div class="posicionamento">
-        <input type="submit" value="Voltar" id="esquerda" onclick="history.back()" style="color:#6a201f; background-color:#FFC0CB;">
+        <input type="submit" value="Voltar" id="esquerda" onclick="history.back()" style="color:#6a201f; background-color:#FFC0CB;" >
           <input type="submit" value="Avançar" id="direita" style="color:#6a201f; background-color:#FFC0CB;">
         </div>
       </fieldset>
@@ -168,14 +181,14 @@
 
   function mostrarCampoDescricao() {
     let decoracaoSelect = document.getElementById("decoracao");
-    let campoDescricao = document.getElementById("campoDescricao");
+    let descricao = document.getElementById("descricao");
 
-  if (decoracaoSelect.value == "Bolo com topo personalizado (papelaria)") {
-    campoDescricao.style.display = "block";
+  if (decoracaoSelect.value == '1') {
+    descricao.style.display = "block";
   } else {
-    campoDescricao.style.display = "none";
+    descricao.style.display = "none";
   }
-}
+  }
 
 </script>
 

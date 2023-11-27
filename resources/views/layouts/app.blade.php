@@ -12,9 +12,12 @@
   <style>
        
     </style>
+    
+    
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger-subtle" style="padding-bottom: 5px; background-color:#FFC0CB;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger-subtle" style="padding-bottom: 5px; background-color:#eeb4df;">
     <div class="container">
         <img src="{{ url('/imagens/logoNados.png')}}" title="logo da confeitaria"  width="150px">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +49,7 @@
                    {{-- config('app.name', 'Laravel') --}} 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                    
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">

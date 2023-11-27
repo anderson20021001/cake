@@ -17,16 +17,12 @@ class ItensVendasSeeder extends Seeder
             'decoracao_id' => 1,
             'massa_id' => 1,
             'recheio_id' => 1,
-            'quantidade' => 1,
             'venda_id' => 1,
             'tamanho_id' => 1,
             'cobertura_id' => 1,
-            'valor' => 50,
-
-
-
-
-           
+            'tipo_id' => 1,
+            'descricao' => 'toy story' 
+        
         ]);
     }
 }

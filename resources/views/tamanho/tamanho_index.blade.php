@@ -4,7 +4,7 @@
 
 
 <div class="container">
-  tamanhos
+  Tamanhos
   <br><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
@@ -16,12 +16,12 @@
       {{ session('status') }}
 </div>
 @endif
-    <script>
-    function confirmDelete() {
-    return confirm('Tem certeza que deseja excluir este registro?');
-    }
-  </script>
 
+<script>
+  function ConfirmDelete() {
+    return confirm('Tem certeza que deseja excluir este registro?');
+  }
+</script>
 
 
 <a href="{{url('/tamanho/create')}}">Criar</a>
@@ -34,6 +34,7 @@
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     text-decoration:none;
+    text-align:center;
 
 
   }
@@ -63,14 +64,16 @@
 
     <td>
       <div id="estilo">
-      <a href= "{{ url('/tamanho/' . $tamanho->id) }}">VISUALIZAR</a>
-      <a href= "{{ url('/tamanho/' . $tamanho->id . '/edit') }}">EDITAR</a>
+      <a href= "{{ url('/tamanho/' . $tamanho->id) }}" class="btn btn-primary">VISUALIZAR</a>
+      <a href= "{{ url('/tamanho/' . $tamanho->id . '/edit') }}" class="btn btn-warning">EDITAR</a>
       <form method="POST" action="{{ url('/tamanho/' . $tamanho->id) }}" onsubmit = "return ConfirmDelete()" >
         @method('DELETE')
         @csrf
-      <input type="submit" value="EXCLUIR">
+        <input class="btn btn-danger" type="submit" value="EXCLUIR">
+     <!--<a href= "{{ url('/tamanho/' . $tamanho->id . '/tamanho') }}" class="btn btn-danger" >Excluir</a>-->
+     </form>
 </div>
-</form>
+
     </td>
   </tr>
   @endforeach

@@ -16,8 +16,8 @@ class VendasSeeder extends Seeder
 
         DB::table('vendas')->insert([
             'cliente_id' => 1,
-            'data' => '2023-09-12',
-            
+            'data' => '2023-11-22',
+            'valor' => 200,
         ]);
     }
 }
