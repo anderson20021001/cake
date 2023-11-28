@@ -86,7 +86,8 @@
     font-style: italic;
     color:#7c3e12;
     text-align:center;
-    min-width:50%;
+    min-width:50%; 
+    font-size:20px;
     margin-bottom:60px;
   }
   .width{
@@ -335,7 +336,7 @@ h5{
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="{{ url('/imagens/morango.jpg')}}" class="card-img-top" alt="...">
+      <img src="{{ url('/imagens/boloDeFrutas.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo de chocolate</h5>
         <p class="card-text">Massa: Chocolate<br> Recheio: chocolate <br> Cobertura: chantininho.</p>
