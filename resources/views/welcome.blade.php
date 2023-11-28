@@ -194,11 +194,7 @@ h5{
         Deixo aqui meu convite a todos vocês para degustarem verdadeiras obras de arte preparadas com muito amor e carinho!!!
       </p>
     </div>
-<<<<<<< Updated upstream
     <img src="{{ url('/imagens/fotoReginaldo.jpg')}}" alt="Sua Imagem" class="image1">
-=======
-    <img src="{{ url('/imagens/fotoPessoal.png')}}" alt="Sua Imagem" class="image1">
->>>>>>> Stashed changes
   </div>
 
 <div class="display">
@@ -232,11 +228,7 @@ h5{
       
       <div class="card-footer">
       <span>
-<<<<<<< Updated upstream
          
-=======
-          
->>>>>>> Stashed changes
       </span>
         
       </div>
@@ -284,7 +276,7 @@ h5{
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="{{ url('/imagens/boloArcoiris.jpg')}}" class="card-img-top" alt="...">
+      <img src="{{ url('/imagens/boloUnicornio.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Personalizado</h5>
         <p class="card-text">Massa: Baunilha<br> Recheio:laka com oreo</p>
@@ -331,11 +323,7 @@ h5{
       
       <div class="card-footer">
       <span>
-<<<<<<< Updated upstream
           
-=======
-         
->>>>>>> Stashed changes
       </span>
       </div>
     </div>
@@ -351,11 +339,7 @@ h5{
      
       <div class="card-footer">
       <span>
-<<<<<<< Updated upstream
          
-=======
-          
->>>>>>> Stashed changes
       </span>
       </div>
     </div>
@@ -499,12 +483,8 @@ h5{
             </a>
         </div> -->
 
-<<<<<<< Updated upstream
     
             
 
-=======
-        
->>>>>>> Stashed changes
 
 @endsection
