@@ -51,6 +51,7 @@
       <th scope="col">ID</th>
       <th scope="col">cliente</th>
       <th scope="col">data</th>
+      <th scope="col">WhatsApp</th>
       <th scope="col">Ações</th>
     </tr>
   </thead>
@@ -60,6 +61,8 @@
    <td>{{$venda->id}}</td>
     <td>{{$venda->cliente->nomeCompleto}}</td>
     <td>{{$venda->data}}</td>
+    <td> <a href="https://wa.me//55{{$venda->cliente->telefone}}?text=Tenho%20interesse%20em%20comprar%20seu%20bolo{{$venda->valor}}">WhatsApp</a></td>
+
    
 
     <td>
