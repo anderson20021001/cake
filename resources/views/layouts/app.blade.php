@@ -29,13 +29,13 @@
                     <a class="nav-link" href="{{ url('/') }}" style="color:#6a201f; font-weight:bolder; font-size:19px; font-style:italic;">Início</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#irParaCard" style="color:#6a201f; font-weight:bolder; font-size:19px; font-style:italic;">Produto</a>
+                    <a class="nav-link" href="{{ url('/') }}" style="color:#6a201f; font-weight:bolder; font-size:19px; font-style:italic;">Produto</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="{{ url('/cadastroCliente') }}" style="color:#6a201f; font-weight:bolder; font-size:19px; font-style:italic;">Fazer Pedido</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="https://api.whatsapp.com/send?phone=21985423502&text=Olá,%20você%20poderia%20me%20ajudar?" style="color: #6a201f; font-weight:bolder; font-size:19px;">Contato</a>
+                    <a class="nav-link" href="https://api.whatsapp.com/send?phone=21985423502&text=Olá,%20você%20poderia%20me%20ajudar?" style="color: #6a201f; font-weight:bolder; font-size:19px;font-style:italic;">Contato</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="#AlterarFonteH1" style="color: #6a201f; font-weight:bolder; font-size:19px; font-style:italic;" >Quem Somos</a>

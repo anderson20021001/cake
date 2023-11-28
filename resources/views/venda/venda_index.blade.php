@@ -4,7 +4,7 @@
 
 
 <div class="container">
-  vendas
+  Vendas
   <br><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
@@ -62,7 +62,7 @@
    <td>{{$venda->id}}</td>
     <td>{{$venda->cliente->nomeCompleto}}</td>
     <td>{{$venda->data}}</td>
-    <td><a href="https://wa.me//55{{$venda->cliente->telefone}}?text=Tenho%20interesse%20em%20comprar%20seu%20bolo%20no%20valor%20de%20{{$venda->valor}}">WhatsApp</a></td>
+    <td><a href="https://wa.me//55{{$venda->cliente->telefone}}?text=Olá%20Tudo%20bem?%20recebemos%20o%20seu%20pedido%20para%20darmos%20continuidade%20é%20necessário%20efetuar%20o%20pagamento%20<br>segue%20a%20baixo%20chave%20pix:%2021992520554%20{{$venda->valor}}">WhatsApp</a></td>
    
 
     <td>

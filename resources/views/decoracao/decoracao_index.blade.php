@@ -71,13 +71,8 @@
         @method('DELETE')
         @csrf
         <input class="btn btn-danger" type="submit" value="EXCLUIR">
-<<<<<<< Updated upstream
         <!--<a href= "{{-- url('/venda/' . $venda->id) --}}" class="btn btn-danger" >Excluir</a>-->
         </form>
-=======
-     <!--<a href= "{{-- url('/tamanho/' . $tamanho->id . '/tamanho') --}}" class="btn btn-danger" >Excluir</a>-->
-     </form>
->>>>>>> Stashed changes
 </div>
 
     </td>

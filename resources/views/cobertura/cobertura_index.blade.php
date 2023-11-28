@@ -34,7 +34,7 @@
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     text-decoration:none;
-
+    text-align:center;
 
   }
 
@@ -63,16 +63,14 @@
 
     <td>
       <div id="estilo">
-      <a href= "{{ url('/cobertura/' . $cobertura->id) }}">VISUALIZAR</a>
-      <a href= "{{ url('/cobertura/' . $cobertura->id . '/edit') }}">EDITAR</a>
+      <a href= "{{ url('/cobertura/' . $cobertura->id) }}" class="btn btn-primary">VISUALIZAR</a>
+      <a href= "{{ url('/cobertura/' . $cobertura->id . '/edit') }}"class="btn btn-warning">EDITAR</a>
       <form method="POST" action="{{ url('/cobertura/' . $cobertura->id) }}" onsubmit = "return ConfirmDelete()" >
         @method('DELETE')
         @csrf
-<<<<<<< Updated upstream
+
       <input type="submit" class="btn btn-danger" value="EXCLUIR">
-=======
-      <input type="submit" value="EXCLUIR">
->>>>>>> Stashed changes
+
       </form>
 </div>
 
