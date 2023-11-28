@@ -16,11 +16,11 @@
       {{ session('status') }}
 </div>
 @endif
-    <script>
-    function confirmDelete() {
+<script>
+  function ConfirmDelete() {
     return confirm('Tem certeza que deseja excluir este registro?');
-    }
-  </script>
+  }
+</script>
 
 
 
@@ -69,9 +69,10 @@
       <form method="POST" action="{{ url('/massa/' . $massa->id) }}" onsubmit = "return ConfirmDelete()" >
         @method('DELETE')
         @csrf
-        <a href= "{{ url('/massa/' . $massa->id . '/edit') }}" class="btn btn-danger" >Excluir</a>
+        <input type="submit" class="btn btn-danger" value="EXCLUIR">
+        </form>
 </div>
-</form>
+
     </td>
   </tr>
   @endforeach
