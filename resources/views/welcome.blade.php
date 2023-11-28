@@ -66,7 +66,7 @@
   .image1 {
  /* A imagem ocupa metade da largura da div */
     max-width:80%;
-    height:400px;
+    height:500px;
   }
 
   .content1 {
@@ -276,7 +276,7 @@ h5{
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="{{ url('/imagens/boloArcoiris.jpg')}}" class="card-img-top" alt="...">
+      <img src="{{ url('/imagens/boloUnicornio.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Personalizado</h5>
         <p class="card-text">Massa: Baunilha<br> Recheio:laka com oreo</p>
