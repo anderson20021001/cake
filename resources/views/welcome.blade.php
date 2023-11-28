@@ -194,7 +194,7 @@ h5{
         Deixo aqui meu convite a todos vocês para degustarem verdadeiras obras de arte preparadas com muito amor e carinho!!!
       </p>
     </div>
-    <img src="{{ url('/imagens/reginaldo.jpg')}}" alt="Sua Imagem" class="image1">
+    <img src="{{ url('/imagens/fotoReginaldo.jpg')}}" alt="Sua Imagem" class="image1">
   </div>
 
 <div class="display">
