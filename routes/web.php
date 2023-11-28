@@ -24,7 +24,8 @@ use App\Http\Controllers\EmailController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('/');
+
 
 
 Route::get('/cliente',[ClienteController::class, 'index'])->name('cliente.index')->middleware('can:is_admin');

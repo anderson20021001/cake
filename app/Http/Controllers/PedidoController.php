@@ -130,7 +130,7 @@ class PedidoController extends Controller
         //$venda = new Venda;
         //$venda->cliente_id = $request->cliente_id;
         //$venda->data = $request->data;
-        $messages = [
+        /*$messages = [
             'tipo_id.required' => 'O :attribute é obrigatório!',
             'tamanho_id.required' => 'O :attribute é obrigatório!',
             'massa_id.required' => 'O :attribute é obrigatório!',
@@ -151,7 +151,7 @@ class PedidoController extends Controller
             'decoracao_id' => 'required',
             'data' => 'required'
     
-        ], $messages);
+        ], $messages);*/
 
         $tipo = Tipo::find($request->tipo_id);
         $tamanho = Tamanho::find($request->tamanho_id);
@@ -187,7 +187,7 @@ class PedidoController extends Controller
         //dd($venda->valor);
         
        
-        
+        return redirect()->route('/')->with('status', 'Pedido enviado com sucesso!');
     }
 
     /**
