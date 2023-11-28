@@ -65,8 +65,8 @@
 
   .image1 {
  /* A imagem ocupa metade da largura da div */
-    max-width:80%;
-    height:400px;
+    width:700px;
+    height:700px;
   }
 
   .content1 {
@@ -86,7 +86,7 @@
     font-style: italic;
     color:#7c3e12;
     text-align:center;
-    max-width:100%;
+    min-width:50%;
     margin-bottom:60px;
   }
   .width{
@@ -104,7 +104,7 @@
     height:250px;
   }
 #expandir{
-  max-width:100%;
+  max-width:80%;
 }
 .card-body{
   display:block
@@ -142,7 +142,7 @@ h5{
 }
       </style>
 
-
+<div class="container-fluid">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -194,7 +194,11 @@ h5{
         Deixo aqui meu convite a todos vocês para degustarem verdadeiras obras de arte preparadas com muito amor e carinho!!!
       </p>
     </div>
+<<<<<<< Updated upstream
     <img src="{{ url('/imagens/fotoReginaldo.jpg')}}" alt="Sua Imagem" class="image1">
+=======
+    <img src="{{ url('/imagens/fotoPessoal.png')}}" alt="Sua Imagem" class="image1">
+>>>>>>> Stashed changes
   </div>
 
 <div class="display">
@@ -222,13 +226,17 @@ h5{
       <img src="{{ url('/imagens/frutasbolo.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Bolo Simples</h5>
-        <p class="card-text">Massa: Banilha<br> Cobertura: Chatininho e frutas.</p>
+        <p class="card-text">Massa: Banilha<br>Recheio:Chantiniho </br> Cobertura: Chatininho e frutas.</p>
         
       </div>
       
       <div class="card-footer">
       <span>
+<<<<<<< Updated upstream
          
+=======
+          
+>>>>>>> Stashed changes
       </span>
         
       </div>
@@ -323,7 +331,11 @@ h5{
       
       <div class="card-footer">
       <span>
+<<<<<<< Updated upstream
           
+=======
+         
+>>>>>>> Stashed changes
       </span>
       </div>
     </div>
@@ -339,7 +351,11 @@ h5{
      
       <div class="card-footer">
       <span>
+<<<<<<< Updated upstream
          
+=======
+          
+>>>>>>> Stashed changes
       </span>
       </div>
     </div>
@@ -413,7 +429,7 @@ h5{
       <a
         class="btn text-white btn-floating m-1"
         style="background-color: #dd4b39;"
-        href="#!"
+        href="mailto:elianecsagaca@gmail.com"
         role="button"
         ><i class="fab fa-google"></i
       >
@@ -469,6 +485,7 @@ h5{
                 <img src="img/wpp-icon.png" alt="">
             </a>
         </div> -->
+</div>
 
        
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0&appId=2832877280281221&autoLogAppEvents=1" nonce="bK74bsQr"></script>
@@ -482,8 +499,12 @@ h5{
             </a>
         </div> -->
 
+<<<<<<< Updated upstream
     
             
 
+=======
+        
+>>>>>>> Stashed changes
 
 @endsection

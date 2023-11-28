@@ -99,13 +99,14 @@ Route::put('/itens_vendas/{id}/edit',[VendaController::class, 'update'])->name('
 Route::get('/itens_vendas/{id}',[VendaController::class, 'show'])->name('itens_vendas.show')->middleware('can:is_admin');
 Route::delete('/itens_vendas/{id}',[VendaController::class, 'destroy'])->name('itens_vendas.destroy')->middleware('can:is_admin');
 
-Route::post('/produto/create', [ClienteController::class, 'store'])->middleware('can:is_admin');
+Route::post('/pedido/create', [ClienteController::class, 'store'])->middleware('can:is_admin');
 Route::get('/pedido',[PedidoController::class, 'index'])->name('pedido.index')->middleware('can:is_admin');
 Route::get('/pedido/create',[PedidoController::class, 'create'])->name('pedido.index')->middleware('can:is_admin');
 Route::post('/pedido/create',[PedidoController::class, 'store'])->name('pedido.index')->middleware('can:is_admin');
 
 Route::get('/cadastroCliente',[PedidoController::class, 'cadastroCliente'])->name('cadastroCliente');
 Route::post('/fazerPedido',[PedidoController::class, 'fazerPedido'])->name('fazerPedido');
+
 
 Route::get('/cadastroCliente',[PedidoController::class, 'cadastroCliente'])->name('cadastroCliente');
 Route::post('/cadastroPedido',[PedidoController::class, 'cadastroPedido'])->name('cadastroPedido');

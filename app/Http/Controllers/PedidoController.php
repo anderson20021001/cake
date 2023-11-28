@@ -130,12 +130,34 @@ class PedidoController extends Controller
         //$venda = new Venda;
         //$venda->cliente_id = $request->cliente_id;
         //$venda->data = $request->data;
+        $messages = [
+            'tipo_id.required' => 'O :attribute é obrigatório!',
+            'tamanho_id.required' => 'O :attribute é obrigatório!',
+            'massa_id.required' => 'O :attribute é obrigatório!',
+            'recheio_id.required' => 'O :attribute é obrigatório!',
+            'cobertura_id.required' => 'O :attribute é obrigatório!',
+            'decoracao_id.required' => 'O :attribute é obrigatório!',
+            'data.required' => 'O :attribute é obrigatório!'
+    
+        ];
 
+
+        $validated = $request->validate([
+            'tipo_id'          => 'required|min:5',
+            'tamanho_id'    => 'required',
+            'massa_id'         => 'required',
+            'recheio_id' => 'required',
+            'cobertura_id' => 'required',
+            'decoracao_id' => 'required',
+            'data' => 'required'
+    
+        ], $messages);
 
         $tipo = Tipo::find($request->tipo_id);
         $tamanho = Tamanho::find($request->tamanho_id);
         $massa = Massa::find($request->massa_id);
         $recheio = Recheio::find($request->recheio_id);
+        $cobertura = Cobertura::find($request->cobertura_id);
         $decoracao = Decoracao::find($request->decoracao_id);
 
         //dd($massa);
@@ -163,6 +185,9 @@ class PedidoController extends Controller
         $item_venda->descricao = $request->descricao;
         $item_venda->save();
         //dd($venda->valor);
+        
+       
+        
     }
 
     /**

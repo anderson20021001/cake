@@ -68,7 +68,11 @@
       <form method="POST" action="{{ url('/cobertura/' . $cobertura->id) }}" onsubmit = "return ConfirmDelete()" >
         @method('DELETE')
         @csrf
+<<<<<<< Updated upstream
       <input type="submit" class="btn btn-danger" value="EXCLUIR">
+=======
+      <input type="submit" value="EXCLUIR">
+>>>>>>> Stashed changes
       </form>
 </div>
 

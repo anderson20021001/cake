@@ -73,7 +73,7 @@
   </head>
   <body>
   <!-- Container principal -->
-  <div class="container">
+  <div class="container-fluid">
 
     <!-- Cabeçalho -->
     <div class="cabecalho">
@@ -167,12 +167,14 @@
         <div class="posicionamento">
         <input type="submit" value="Voltar" id="esquerda" onclick="history.back()" style="color:#6a201f; background-color:#FFC0CB;" >
           <input type="submit" value="Avançar" id="direita" style="color:#6a201f; background-color:#FFC0CB;">
+          
         </div>
       </fieldset>
     
     </form>
    
   </div>
+    </div>
     </div>
     <script>
   document.getElementById("backBtn").addEventListener("click", function(){
