@@ -49,13 +49,8 @@
     <tr>
 
       <th scope="col">ID</th>
-<<<<<<< Updated upstream
-      <th scope="col">cliente</th>
-      <th scope="col">data</th>
-=======
       <th scope="col">Cliente</th>
       <th scope="col">Data</th>
->>>>>>> Stashed changes
       <th scope="col">WhatsApp</th>
       <th scope="col">Ações</th>
 
@@ -67,12 +62,7 @@
    <td>{{$venda->id}}</td>
     <td>{{$venda->cliente->nomeCompleto}}</td>
     <td>{{$venda->data}}</td>
-<<<<<<< Updated upstream
-    <td> <a href="https://wa.me//55{{$venda->cliente->telefone}}?text=Tenho%20interesse%20em%20comprar%20seu%20bolo{{$venda->valor}}">WhatsApp</a></td>
-
-=======
     <td><a href="https://wa.me//55{{$venda->cliente->telefone}}?text=Tenho%20interesse%20em%20comprar%20seu%20bolo%20no%20valor%20de%20{{$venda->valor}}">WhatsApp</a></td>
->>>>>>> Stashed changes
    
 
     <td>
