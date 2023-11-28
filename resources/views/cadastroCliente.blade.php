@@ -159,7 +159,7 @@
         <div class="posicionamento">
           
          
-          <input type="submit" value="Voltar" id="esquerda" onclick="history.back()" style="color:#6a201f; background-color:#FFC0CB;">
+          
           <input type="submit" value="Avançar" id="direita" style="color:#6a201f; background-color:#FFC0CB;">
         </div>
       

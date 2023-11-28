@@ -12,8 +12,7 @@ use App\Models\Cobertura;
 use App\Models\Cliente;
 use App\Models\Venda;
 use App\Models\Item_venda;
-
-
+use Illuminate\Support\Facades\Validator;
 
 class PedidoController extends Controller
 {
@@ -123,14 +122,49 @@ class PedidoController extends Controller
 
 
     public function cadastroPedido(Request $request){
-        //dd($request->all());
 
+        /*
+        $validator = Validator::make($request->all(), [
+            'decoracao_id' => 'required',
+        ]);
+ 
+        if ($validator->fails()) {
+            return redirect('fazerPedido')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+        */  
+
+        //dd($request->all());
+        /*
+        if($request->decoracao_id == null){
+            //dd('ENTROU');
+            return redirect()->route('fazerPedido')->with('status', 'O campo decoracao é obrigatório!');
+        }
+        */
         //$date = Carbon::now()->format('Y-m-d');
  
         //$venda = new Venda;
         //$venda->cliente_id = $request->cliente_id;
         //$venda->data = $request->data;
-        /*$messages = [
+
+        //$validator = Validator::make($request->all(), [
+        //    'decoracao_id' => 'required'
+        //]);
+
+        //dd($validator->fails());
+        /*
+        if ($validator->fails()) {
+            dd('ENTROU');
+            //return view('view_name');
+        } else {
+            dd('NAO ENTROU');
+            //return view('view_name');
+        }
+        */
+
+        /*
+        $messages = [
             'tipo_id.required' => 'O :attribute é obrigatório!',
             'tamanho_id.required' => 'O :attribute é obrigatório!',
             'massa_id.required' => 'O :attribute é obrigatório!',
@@ -138,7 +172,6 @@ class PedidoController extends Controller
             'cobertura_id.required' => 'O :attribute é obrigatório!',
             'decoracao_id.required' => 'O :attribute é obrigatório!',
             'data.required' => 'O :attribute é obrigatório!'
-    
         ];
 
 
@@ -151,7 +184,8 @@ class PedidoController extends Controller
             'decoracao_id' => 'required',
             'data' => 'required'
     
-        ], $messages);*/
+        ], $messages);
+        */
 
         $tipo = Tipo::find($request->tipo_id);
         $tamanho = Tamanho::find($request->tamanho_id);
@@ -160,13 +194,14 @@ class PedidoController extends Controller
         $cobertura = Cobertura::find($request->cobertura_id);
         $decoracao = Decoracao::find($request->decoracao_id);
 
-        //dd($massa);
-
-        /*dd($tipo->valor , 
+        //dd($decoracao);
+        /*
+        dd($tipo->valor , 
         $tamanho->valor ,
-         $massa->valor , 
-         $recheio->valor ,
-          $decoracao->valor);*/
+        $massa->valor , 
+        $recheio->valor ,
+         $decoracao->valor);
+        */
 
         $venda = new Venda;
         $venda->cliente_id = $request->cliente_id;

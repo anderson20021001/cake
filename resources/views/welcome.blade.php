@@ -193,11 +193,7 @@ h5{
     <div class="content1">
       <h1 id="AlterarFonteH1">Nado Cake's</h1> <br><br>,<br>
       <p class="fonte">
-        Reginaldo é um entusiasta da culinária desde a adolescência, e sua mãe foi sua grande inspiração.
-        Resolveu investir na ideia e se especializar em fazer bolos para festas, eventos e aprimorou-se em decoração.
-        Criou novos sabores de recheios para atender às preferências dos seus clientes.
-        A marca Nado Cake’s é reconhecida pela qualidade, sabor, criatividade, bolos personalizados e por fazer com que cada celebração seja única e especial.
-        Deixo aqui meu convite a todos vocês para degustarem verdadeiras obras de arte preparadas com muito amor e carinho!!!
+      Reginaldo, ao longo de sua jornada culinária, mergulhou no universo dos bolos, inspirado pela sua mãe e apaixonado desde a adolescência. Especializou-se em criar verdadeiras obras de arte açucaradas, destacando-se na produção de bolos personalizados para festas e eventos. Sua dedicação resultou na renomada marca Nado Cake’s, reconhecida pela qualidade, sabor e criatividade. Com recheios inovadores, ele transforma cada celebração em algo único e especial. Convido a todos a saborearem essas delícias, feitas com amor e carinho, e a descobrirem o encanto por trás de cada criação da Nado Cake’s!
       </p>
     </div>
     <img src="{{ url('/imagens/fotoReginaldo.jpg')}}" alt="Sua Imagem" class="image1">
